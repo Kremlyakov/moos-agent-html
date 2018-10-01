@@ -98,3 +98,23 @@
 .icon-user-1:before {
   content: "\74";
 }
+
+i.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dot {
+    width: 4px;
+    height: 4px;
+    background-color: #9b9b9b;
+    border-radius: 50%;
+    margin: 0 1px;
+  }
+}

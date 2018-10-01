@@ -1,0 +1,159 @@
+/* TODO: neeed to be moved to variables */
+$badge-color-1: #b060ef;
+$badge-color-2: #fa6a47;
+$badge-color-3: #ffbe00;
+$badge-color-4: #ffbe00;
+$badge-color-5: #22c7b5;
+$badge-color-6: #22c7b5;
+
+.stages-progress {
+  display: flex;
+  align-items: center;
+
+  $r: &;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 4px;
+
+    #{$r}__icon {
+      width: 16px;
+      height: 16px;
+    }
+    #{$r}__text {
+      font: {
+        size: 12px;
+        weight: 500;
+      };
+      color: #fff;
+    }
+
+    &:nth-child(1) {
+      #{$r}__icon {
+        color: $badge-color-1;
+      }
+    }
+    &:nth-child(2) {
+      #{$r}__icon {
+        color: $badge-color-2;
+      }
+    }
+    &:nth-child(3) {
+      #{$r}__icon {
+        color: $badge-color-3;
+      }
+    }
+    &:nth-child(4) {
+      #{$r}__icon {
+        color: $badge-color-4;
+      }
+    }
+    &:nth-child(5) {
+      #{$r}__icon {
+        color: $badge-color-5;
+      }
+    }
+    &:nth-child(6) {
+      #{$r}__icon {
+        color: $badge-color-6;
+      }
+    }
+
+    &--confirmed {
+      #{$r}__icon {
+        display: inline-flex;
+      }
+      #{$r}__text {
+        display: none;
+      }
+/*
+      &:hover {
+        cursor: pointer;
+        margin: 0 4px;
+        padding: {
+          left: 4px;
+          right: 12px;
+        };
+
+        &:nth-child(1) {
+          background-color: $badge-color-1;
+        }
+        &:nth-child(2) {
+          background-color: $badge-color-2;
+        }
+        &:nth-child(3) {
+          background-color: $badge-color-3;
+        }
+        &:nth-child(4) {
+          background-color: $badge-color-4;
+        }
+        &:nth-child(5) {
+          background-color: $badge-color-5;
+        }
+        &:nth-child(6) {
+          background-color: $badge-color-6;
+        }
+
+        #{$r}__icon {
+          color: #fff;
+          margin: 0 4px 0 0;
+        }
+        #{$r}__text {
+          display: inline-flex;
+        }
+      }*/
+    }
+    &--active {
+      padding: {
+        left: 12px;
+        right: 12px;
+      };
+
+      &:nth-child(1) {
+        background-color: $badge-color-1;
+      }
+      &:nth-child(2) {
+        background-color: $badge-color-2;
+      }
+      &:nth-child(3) {
+        background-color: $badge-color-3;
+      }
+      &:nth-child(4) {
+        background-color: $badge-color-4;
+      }
+      &:nth-child(5) {
+        background-color: $badge-color-5;
+      }
+      &:nth-child(6) {
+        background-color: $badge-color-6;
+      }
+
+      #{$r}__icon {
+        display: none;
+      }
+      #{$r}__text {
+        display: inline-block;
+      }
+    }
+    &--disabled {
+      background-color: #eee;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+
+      #{$r}__icon {
+        display: none;
+      }
+      #{$r}__text {
+        display: none;
+      }
+    }
+
+    &--active,
+    &--disabled {
+      margin: 0 4px;
+    }
+  }
+}
