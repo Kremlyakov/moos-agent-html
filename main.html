@@ -35,12 +35,16 @@
       <div class="main-filter">
         <div class="main-filter__row">
           <div class="main-filter__control main-filter__control--icon-right">
-            <select type="text" class="main-filter__control-field">
-              <option value="0" selected>Все документы</option>
-              <option value="1" selected>Документ 1</option>
-              <option value="2" selected>Документ 2</option>
-              <option value="3" selected>Документ 3</option>
-            </select>
+            <div class="dropdown">
+              <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                Все документы
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Документ 1</a>
+                <a class="dropdown-item" href="#">Документ 2</a>
+                <a class="dropdown-item" href="#">Документ 3</a>
+              </div>
+            </div>
             <i class="icon icon-chevron-down"></i>
           </div>
           <div class="main-filter__control main-filter__control--icon-left">

@@ -1,0 +1,107 @@
+/* Modal */
+.modal-open{
+
+  .fr-app{
+    background-color: rgba(36, 34, 50, 0.8);
+    filter:blur(4px);
+    -o-filter:blur(4px);
+    -ms-filter:blur(4px);
+    -moz-filter:blur(4px);
+    -webkit-filter:blur(4px);
+  }
+  .close{
+    display: block!important;
+  }
+}
+.modal-backdrop{
+  background-color: rgba(36, 34, 50, 0.8)!important;
+}
+.modal-backdrop.show{
+  opacity: 1!important;
+}
+
+.modal-custom{
+
+  .close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: none;
+    width: 48px;
+    height: 48px;
+    font-size: 2.7rem;
+    font-weight: normal;
+    text-shadow: none;
+    border-radius: 32px;
+    background-color: #fff;
+    z-index: 99999;
+    opacity: 1;
+  }
+}
+
+.modal-custom{
+
+  .modal-lg{
+    max-width: 800px;
+  }
+  .modal-custom-header{
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000
+  }
+  .modal-content{
+    padding: 32px;
+  }
+}
+
+/* modal-custom--empty */
+.modal-custom--empty{
+
+  .modal-dialog{
+    width: 380px;
+  }
+  .modal-content{
+    border: none;
+    background: transparent;
+  }
+}
+
+.restore-pass{
+
+  &__title{
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+  &__description{
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+/* restore-pass-form */
+.restore-pass-form{
+
+  .btn-white{
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+  }
+}

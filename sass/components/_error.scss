@@ -1,0 +1,28 @@
+.error-message {
+  margin: auto;
+
+  &__title, &__text {
+    color: #fff;
+  }
+
+  &__title {
+    font: {
+      size: 24px;
+      weight: 500;
+    };
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+    margin-top: 16px;
+    opacity: 0.8;
+  }
+
+  .btn {
+    max-width: 376px;
+    margin: auto;
+  }
+}

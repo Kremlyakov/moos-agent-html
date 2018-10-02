@@ -1,0 +1,15 @@
+.dropdown-menu {
+  border: none;
+  min-width: 100%;
+  border-radius: 0;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.48);
+
+  .dropdown-item {
+    padding: 12px 20px;
+    white-space: normal;
+    font: {
+      size: 14px;
+      weight: 500;
+    };
+  }
+}

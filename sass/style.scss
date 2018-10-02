@@ -1,7 +1,17 @@
+// Plugins
 @import "bootstrap/bootstrap";
 
-@import "elements/buttons";
+// Helpers
+@import "helpers/variables";
 
+// Elements
+@import "elements/buttons";
+@import "elements/modal";
+@import "elements/form";
+@import "elements/dropdown";
+@import "elements/notification";
+
+// Components
 @import "components/grid";
 @import "components/base";
 @import "components/helpers";
@@ -13,6 +23,12 @@
 @import "components/stages-progress";
 @import "components/checkbox-list";
 @import "components/filter-slider";
+@import "components/stats-list";
+@import "components/main-stats";
+@import "components/deals-list";
+@import "components/empty-message";
+@import "components/error";
 
+// Layout
 @import "layout/login";
 @import "layout/main";

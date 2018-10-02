@@ -1,0 +1,26 @@
+.notification {
+  display: flex;
+  justify-content: center;
+  background-color: #ff0000;
+  padding: 14px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+
+  &__text {
+    display: inline-block;
+    font: {
+      size: 12px;
+      weight: 500;
+    };
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .icon {
+    font-size: 12px;
+    color: #fff;
+  }
+}
