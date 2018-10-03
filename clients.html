@@ -15,7 +15,7 @@
 <div class="fr-app fr-main">
   <div class="fr-container">
     <section class="fr-sidebar">
-      <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt=""logo></a>
+      <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt="logo"></a>
       <ul class="fr-sidebar__menu">
         <li><span class="icon icon-ok"></span><a href="#">Задачи</a></li>
         <li class="fr-sidebar__menu--active"><span class="icon icon-user"></span><a href="#">Клиенты</a></li>
@@ -105,7 +105,7 @@
         </div>
       </div>
       <div class="block-list block-list--clients">
-        <div class="block-list__item">
+        <div class="block-list__item" data-toggle="modal" data-target="#clientModal">
           <div class="block-list__row">
             <div>
               <div class="block-list__info block-list__info--with-icon">
@@ -149,7 +149,7 @@
             </div>
           </div>
         </div>
-        <div class="block-list__item">
+        <div class="block-list__item" data-toggle="modal" data-target="#clientModal">
           <div class="block-list__row">
             <div>
               <div class="block-list__info block-list__info--with-icon">
@@ -189,7 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="block-list__item">
+        <div class="block-list__item" data-toggle="modal" data-target="#clientModal">
           <div class="block-list__row">
             <div>
               <div class="block-list__info block-list__info--with-icon">
@@ -229,7 +229,7 @@
             </div>
           </div>
         </div>
-        <div class="block-list__item">
+        <div class="block-list__item" data-toggle="modal" data-target="#clientModal">
           <div class="block-list__row">
             <div>
               <div class="block-list__info block-list__info--with-icon">
@@ -284,6 +284,216 @@
     <a href="#" class="btn-options__link"></a>
   </div>
 </div>
+
+<!-- Modal-custom -->
+<div class="modal-custom modal-custom--with-help-block">
+  <div class="modal bd-example-modal-lg" id="clientModal" tabindex="-1" role="dialog" aria-labelledby="clientModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-content__header">
+          <div>
+            <div class="modal-content__title">
+              <span class="icon icon-user"></span>
+              <span>ООО «ОДАС» Сколково</span>
+            </div>
+            <div class="modal-content__title">
+              <span>ИНН: 771375236257</span>
+            </div>
+          </div>
+          <div>
+            <ul class="stats-list">
+              <li class="stats-list__item stats-list__item--purple">
+                <i class="icon icon-ok"></i>
+                <span>1</span>
+              </li>
+              <li class="stats-list__item stats-list__item--yellow">
+                <i class="icon icon-ok"></i>
+                <span>2</span>
+              </li>
+              <li class="stats-list__item stats-list__item--green">
+                <i class="icon icon-ok"></i>
+                <span>10</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-content__body">
+          <div class="info-block">
+            <div class="info-block__item info-block__item--title-main info-block__item--left">
+              Индивидуальный предприниматель, г. Ярославль
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">КПП</span>
+              <span class="info-block__item-value">771001001</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">ОГРН</span>
+              <span class="info-block__item-value">771375236257</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block__item info-block__item--title info-block__item--left info-block__item--fullwidth">
+              Контакты
+            </div>
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-title">Адрес</span>
+              <span class="info-block__item-value">Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Телефон</span>
+              <span class="info-block__item-value">+7 495 950-21-56</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Контактное лицо</span>
+              <span class="info-block__item-value">Мельникова Е. В.</span>
+            </div>
+          </div>
+          <div class="info-block info-block--last">
+            <div class="info-block__item info-block__item--title info-block__item--left info-block__item--fullwidth">
+              Документы
+            </div>
+            <div class="info-block__item info-block__item--fullwidth">
+              <span class="info-block__item-title">Контракты</span>
+              <span class="info-block__item-value">
+                <a href="#"><span>Контракт_Москва 129000_2018_сентябрь.docx</span><span>(1,2мб)</span></a>
+              </span>
+              <span class="info-block__item-value">
+                <a href="#"><span>Контракт_Москва 129000_2018_июнь.docx</span><span>(1,2мб)</span></a>
+              </span>
+              <span class="info-block__item-value">
+                <a href="#"><span>Контракт_Москва 129000_2018_апрель.docx</span><span>(1,2мб)</span></a>
+              </span>
+            </div>
+          </div>
+          <div class="orders-list">
+            <div class="orders-list__row">
+              <div class="orders-list__title">
+                <span class="orders-list__title-name">101-ЭГБ/17</span>
+                <span class="orders-list__title-date">от 19.07.2018</span>
+              </div>
+              <span class="badge badge--purple">Новая заявка</span>
+            </div>
+            <div class="orders-list__row">
+              <div class="orders-list__title">
+                <span class="orders-list__title-name">101-ЭГБ/17</span>
+                <span class="orders-list__title-date">от 19.07.2018</span>
+              </div>
+              <span class="badge badge--yellow">Требует изменения</span>
+            </div>
+            <div class="orders-list__row">
+              <div class="orders-list__title">
+                <span class="orders-list__title-name">101-ЭГБ/17</span>
+                <span class="orders-list__title-date">от 19.07.2018</span>
+              </div>
+              <span class="badge badge--yellow">Одобрено, требует заполнения уведомления</span>
+            </div>
+            <div class="orders-list__row">
+              <div class="orders-list__title">
+                <span class="orders-list__title-name">101-ЭГБ/17</span>
+                <span class="orders-list__title-date">от 19.07.2018</span>
+              </div>
+              <span class="badge badge--green">Готово к отправке</span>
+            </div>
+            <div class="orders-list__row">
+              <div class="orders-list__title">
+                <span class="orders-list__title-name">101-ЭГБ/17</span>
+                <span class="orders-list__title-date">от 19.07.2018</span>
+              </div>
+              <span class="badge badge--green">Одобрено</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-help-block">
+        <div class="modal-help-block__container">
+          <div class="modal-help-block__header">
+            <span>История клиента</span>
+            <i class="icon icon-chevron-right"></i>
+          </div>
+          <div class="modal-help-block__body">
+            <div class="history-list">
+              <div class="history-list__item">
+                <div class="history-list__icon">
+                  <i class="icon icon-ok icon--purple"></i>
+                </div>
+                <div class="history-list__item-body">
+                  <div class="history-list__info">
+                    <span>19.07.2018</span>
+                    <span>101-ЭГБ/17</span>
+                  </div>
+                  <div class="history-list__title">
+                    Новая заявка
+                  </div>
+                  <div class="history-list__status">
+                    Заполнена и отправлена
+                  </div>
+                </div>
+              </div>
+              <div class="history-list__item">
+                <div class="history-list__icon">
+                  <i class="icon icon-ok icon--red"></i>
+                </div>
+                <div class="history-list__item-body">
+                  <div class="history-list__info">
+                    <span>19.07.2018</span>
+                    <span>101-ЭГБ/17</span>
+                  </div>
+                  <div class="history-list__title">
+                    Отказано банком, возврат на доработку
+                  </div>
+                  <div class="history-list__status">
+                    Исправлено
+                  </div>
+                </div>
+              </div>
+              <div class="history-list__item">
+                <div class="history-list__icon">
+                  <i class="icon icon-ok icon--yellow"></i>
+                </div>
+                <div class="history-list__item-body">
+                  <div class="history-list__info">
+                    <span>19.07.2018</span>
+                    <span>101-ЭГБ/17</span>
+                  </div>
+                  <div class="history-list__title">
+                    Одобрено, требует заполнения уведомления
+                  </div>
+                  <div class="history-list__status">
+                    Уведомление заполнено
+                  </div>
+                </div>
+              </div>
+              <div class="history-list__item">
+                <div class="history-list__icon">
+                  <i class="icon icon-ok icon--green"></i>
+                </div>
+                <div class="history-list__item-body">
+                  <div class="history-list__info">
+                    <span>19.07.2018</span>
+                    <span>101-ЭГБ/17</span>
+                  </div>
+                  <div class="history-list__status">
+                    Одобрено. Требует проверки перед отправкой
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-help-block__footer">
+          </div>
+        </div>
+        <a href="#" class="btn btn-send">
+          <span>Отправить ссылку</span>
+          <i class="icon icon-send"></i>
+        </a>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
 
 <!-- Optional JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

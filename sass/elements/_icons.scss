@@ -118,3 +118,18 @@ i.icon {
     margin: 0 1px;
   }
 }
+
+.icon {
+  &--purple {
+    color: $color-purple;
+  }
+  &--red {
+    color: $color-red;
+  }
+  &--yellow {
+    color: $color-yellow;
+  }
+  &--green {
+    color: $color-green;
+  }
+}
