@@ -33,67 +33,71 @@
     </section>
     <section class="fr-content">
       <div class="main-filter">
-        <div class="main-filter__row main-filter__row--disabled">
-          <div class="main-filter__control main-filter__control--icon-right">
-            <div class="dropdown">
-              <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
-                Все документы
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Документ 1</a>
-                <a class="dropdown-item" href="#">Документ 2</a>
-                <a class="dropdown-item" href="#">Документ 3</a>
+        <div class="main-filter__container">
+          <div class="main-filter__content">
+          <div class="main-filter__row main-filter__row--disabled">
+            <div class="main-filter__control main-filter__control--icon-right">
+              <div class="dropdown">
+                <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                  Все документы
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Документ 1</a>
+                  <a class="dropdown-item" href="#">Документ 2</a>
+                  <a class="dropdown-item" href="#">Документ 3</a>
+                </div>
+              </div>
+              <i class="icon icon-chevron-down"></i>
+            </div>
+            <div class="main-filter__control main-filter__control--icon-left">
+              <i class="icon icon-calendar"></i>
+              <input type="text" class="main-filter__control-field" placeholder="Даты" />
+            </div>
+            <div class="main-filter__control">
+              <input type="text" class="main-filter__control-field" placeholder="Номер сделки" />
+            </div>
+            <div class="main-filter__control">
+              <input type="text" class="main-filter__control-field" placeholder="Клиент" />
+            </div>
+            <div class="main-filter__control main-filter__control--button">
+              <button class="btn btn-search"><i class="icon icon-seacrh-m"></i></button>
+            </div>
+          </div>
+          <div class="main-filter__row main-filter__row--disabled">
+            <div class="checkbox-list">
+              <div class="checkbox-list__item checkbox-list__item--purple">
+                <input type="radio" name="main-filter" id="mainFilterCheckbox1">
+                <label for="mainFilterCheckbox1">Подано</label>
+              </div>
+              <div class="checkbox-list__item checkbox-list__item--red">
+                <input type="radio" name="main-filter" id="mainFilterCheckbox2">
+                <label for="mainFilterCheckbox2">Отказано</label>
+              </div>
+              <div class="checkbox-list__item checkbox-list__item--orange">
+                <input type="radio" name="main-filter" id="mainFilterCheckbox3">
+                <label for="mainFilterCheckbox3">В процессе</label>
+              </div>
+              <div class="checkbox-list__item checkbox-list__item--blue">
+                <input type="radio" name="main-filter" id="mainFilterCheckbox4">
+                <label for="mainFilterCheckbox4">Одобрено</label>
+              </div>
+              <div class="checkbox-list__item checkbox-list__item--white">
+                <input type="radio" name="main-filter" id="mainFilterCheckbox5">
+                <label for="mainFilterCheckbox5">
+                  <span class="icon icon-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </span>
+                </label>
               </div>
             </div>
-            <i class="icon icon-chevron-down"></i>
-          </div>
-          <div class="main-filter__control main-filter__control--icon-left">
-            <i class="icon icon-calendar"></i>
-            <input type="text" class="main-filter__control-field" placeholder="Даты" />
-          </div>
-          <div class="main-filter__control">
-            <input type="text" class="main-filter__control-field" placeholder="Номер сделки" />
-          </div>
-          <div class="main-filter__control">
-            <input type="text" class="main-filter__control-field" placeholder="Клиент" />
-          </div>
-          <div class="main-filter__control main-filter__control--button">
-            <button class="btn btn-search"><i class="icon icon-seacrh-m"></i></button>
-          </div>
-        </div>
-        <div class="main-filter__row main-filter__row--disabled">
-          <div class="checkbox-list">
-            <div class="checkbox-list__item checkbox-list__item--purple">
-              <input type="radio" name="main-filter" id="mainFilterCheckbox1">
-              <label for="mainFilterCheckbox1">Подано</label>
-            </div>
-            <div class="checkbox-list__item checkbox-list__item--red">
-              <input type="radio" name="main-filter" id="mainFilterCheckbox2">
-              <label for="mainFilterCheckbox2">Отказано</label>
-            </div>
-            <div class="checkbox-list__item checkbox-list__item--orange">
-              <input type="radio" name="main-filter" id="mainFilterCheckbox3">
-              <label for="mainFilterCheckbox3">В процессе</label>
-            </div>
-            <div class="checkbox-list__item checkbox-list__item--blue">
-              <input type="radio" name="main-filter" id="mainFilterCheckbox4">
-              <label for="mainFilterCheckbox4">Одобрено</label>
-            </div>
-            <div class="checkbox-list__item checkbox-list__item--white">
-              <input type="radio" name="main-filter" id="mainFilterCheckbox5">
-              <label for="mainFilterCheckbox5">
-                <span class="icon icon-dots">
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </span>
-              </label>
+            <div class="filter-slider">
+              <span>От 30К ₽</span>
+              <input id="rangeSlider" type="text" class="filter-slider__control" data-slider-min="30000" data-slider-max="6900000" data-slider-value="[45000, 5900000]" />
+              <span>До 6.9М ₽</span>
             </div>
           </div>
-          <div class="filter-slider">
-            <span>От 30К ₽</span>
-            <input id="rangeSlider" type="text" class="filter-slider__control" data-slider-min="30000" data-slider-max="6900000" data-slider-value="[45000, 5900000]" />
-            <span>До 6.9М ₽</span>
           </div>
         </div>
       </div>

@@ -60,6 +60,8 @@ body{
 
 .fr-container{
   height: 100%;
+  margin: 0 auto;
+  width: 900px;
 
   .fr-sidebar{
     position: fixed;
@@ -68,11 +70,12 @@ body{
     width: 240px;
     height: 100%;
     background-color: #242232;
+    z-index: 999;
   }
   .fr-content{
     width: 930px;
     height: 100%;
-    margin-left: 270px;
+    margin-left: 105px;
   }
 
   &--with-notification {
@@ -86,6 +89,7 @@ body{
   }
 
   &--error {
+    width: 100%;
     display: flex;
     background-color: #242232;
 
@@ -104,3 +108,8 @@ body{
   }
 }
 
+.fr-notification{
+  .main-filter{
+    top:45px;
+  }
+}
