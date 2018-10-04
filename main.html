@@ -302,7 +302,7 @@
     </section>
   </div>
   <div class="btn-options">
-    <a href="#" class="btn-options__link"></a>
+    <a href="#" class="btn-options__link" data-toggle="modal" data-target="#optionsModal"></a>
   </div>
 </div>
 
@@ -536,6 +536,25 @@
           <i class="icon icon-send"></i>
         </a>
       </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom">
+  <div class="modal bd-example-modal-lg" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="optionsModalLabel" aria-hidden="true">
+    <div class="modal-menu">
+      <a href="#" class="modal-menu__item">
+        <img src="img/new-garantee.svg" alt="">
+        <span>Новая гарантия</span>
+      </a>
+      <a href="#" class="modal-menu__item">
+        <img src="img/rewrite-garantee.svg" alt="">
+        <span>Перевыпуск гарантии</span>
+      </a>
     </div>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
       <span aria-hidden="true">&times;</span>

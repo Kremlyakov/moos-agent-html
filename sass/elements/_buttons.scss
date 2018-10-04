@@ -1,11 +1,11 @@
 .btn {
   border-radius: 16px;
+  height: 48px;
+  font-size: 16px;
 
   &.btn-primary {
     background-color: #8f8e97;
     border-color: #8f8e97;
-    border-radius: 16px;
-    height: 48px;
     padding: 5px 21px;
 
     &:not(:disabled):not(.disabled):active,
@@ -41,7 +41,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 48px;
     background-color: #fff;
     border-color: #fff;
     color: $color-black;
@@ -141,6 +140,42 @@
     &:hover {
       background-color: darken(#22c7b5, 10);
       border-color: darken(#22c7b5, 10);
+    }
+  }
+  &.btn-save {
+    background-color: rgba(36, 34, 50, 0.8);
+    border-color: rgba(36, 34, 50, 0.8);
+    display: flex;
+    align-items: center;
+    max-width: 216px;
+    color: #fff;
+
+    .btn__icon-container {
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .btn__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .btn__state {
+      font: {
+        size: 12px;
+        weight: 500;
+      };
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .btn__action {
+      font: {
+        size: 10px;
+        weight: 500;
+      };
+      line-height: 1.2;
+      color: #9b9b9b;
     }
   }
   &.btn-sm {

@@ -117,10 +117,236 @@
 </div>
 
 <!-- Modal-custom -->
+<div class="modal-custom modal-custom--with-help-block">
+  <div class="modal bd-example-modal-lg" id="newGaranteeModal" tabindex="-1" role="dialog" aria-labelledby="newGaranteeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-content__header">
+          <div>
+            <div class="modal-content__title">
+              <span>Банковская гарантия</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content__body">
+          <div class="modal-content__row">
+            <form action="" class="form">
+              <div class="form__title">
+                Принципал
+              </div>
+              <div class="form__row row">
+                <div class="form-group col-8">
+                  <label for="companyName">Наименование компании</label>
+                  <div id="companyName" class="form-control form-control--icon-right form-control--dropdown">
+                    <div class="dropdown dropdown--company">
+                      <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                        Все документы
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                          <div class="dropdown-item__name">ООО «ФАЗУМ»</div>
+                          <div class="dropdown-item__text">
+                            <span>ИНН:</span>
+                            771375236257
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <div class="dropdown-item__name">ООО «ФАЗУМЛАБ»</div>
+                          <div class="dropdown-item__text">
+                            <span>ИНН:</span>
+                            771375236257
+                          </div>
+                        </a>
+                        <div class="dropdown-item__button-container">
+                          <a href="#" class="btn btn-primary">
+                            <i class="icon icon-user"></i>
+                            Добавить компанию
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+                <div class="form-group col-4 form-group--invalid">
+                  <label for="companyINN">ИНН</label>
+                  <div class="form-control-container">
+                    <input type="text" class="form-control" id="companyINN" placeholder="ИНН" />
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <hr>
+              <div class="form__row row">
+                <div class="form-group col-12">
+                  <label for="garanteeType">Вид банковской гарантии</label>
+                  <div id="garanteeType" class="form-control form-control--icon-right form-control--dropdown">
+                    <div class="dropdown dropdown--company">
+                      <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                        Обеспечение заявки на участие в торгах
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Тип 1</a>
+                        <a class="dropdown-item" href="#">Тип 2</a>
+                        <a class="dropdown-item" href="#">Тип 3</a>
+                        <a class="dropdown-item" href="#">Тип 4</a>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <hr>
+              <div class="form__title">
+                Сведения о закупке / контракте
+              </div>
+              <div class="form__row row">
+                <div class="form-group col-12">
+                  <label for="bidsNumber">Реестровый № торгов</label>
+                  <div class="form-control-container">
+                    <input type="text" class="form-control form-control--text-center" id="bidsNumber" placeholder="Реестровый № торгов" disabled />
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <div class="form__row row">
+                <div class="form-group col-4">
+                  <label for="orderType">Тип закупки</label>
+                  <div class="form-control-container">
+                    <input type="text" class="form-control form-control--text-center" id="orderType" placeholder="Напишите" disabled />
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+                <div class="form-group col-4">
+                  <label for="orderType">Дата размещения</label>
+                  <div class="form-control-container form-control-container--icon-left">
+                    <input type="text" class="form-control form-control--text-center" placeholder="Даты" disabled />
+                    <i class="icon icon-calendar"></i>
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+                <div class="form-group col-4">
+                  <label for="orderPrice">Предложеная цена</label>
+                  <div class="form-control-container">
+                    <input type="text" class="form-control form-control--text-center" id="orderPrice" placeholder="100 ₽" disabled />
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <div class="form__row row">
+                <div class="form-group col-12">
+                  <label for="contractThing">Предмет контракта / предмет закупки</label>
+                  <div class="form-control-container">
+                    <input type="text" class="form-control form-control--text-center" id="contractThing" placeholder="Напишите" disabled />
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <hr>
+              <div class="form__title">
+                Условия банковской гарантии
+              </div>
+              <div class="form__row row">
+                <div class="form-group col-4">
+                  <label for="garanteeStartEnd">Начало и окончание</label>
+                  <div class="form-control-container form-control-container--icon-left">
+                    <input type="text" class="form-control form-control--text-center" id="garanteeStartEnd" placeholder="Даты" disabled />
+                    <i class="icon icon-calendar"></i>
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+                <div class="form-group col-4">
+                  <div class="form-group">
+                    <label for="garanteePeriod">Срок БГ</label>
+                    <div id="garanteePeriod" class="form-control form-control--icon-right form-control--dropdown">
+                      <div class="dropdown dropdown--company">
+                        <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                          1 день
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">1 день</a>
+                          <a class="dropdown-item" href="#">2 дня</a>
+                          <a class="dropdown-item" href="#">3 дня</a>
+                          <a class="dropdown-item" href="#">4 дня</a>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                  </div>
+                </div>
+                <div class="form-group col-4">
+                  <label for="garanteeRecieveDate">Желаемая дата выдачи</label>
+                  <div class="form-control-container form-control-container--icon-left">
+                    <input type="text" class="form-control form-control--text-center" id="garanteeRecieveDate" placeholder="Дата" disabled />
+                    <i class="icon icon-calendar"></i>
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <div class="form__row row">
+                <div class="form-group col-12">
+                  <label for="garanteeTotalPrice">Итого гарантия</label>
+                  <div class="form-control-container">
+                    <input type="text" class="form-control form-control--text-center" id="garanteeTotalPrice" placeholder="Сумма ₽" disabled />
+                  </div>
+                  <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+                </div>
+              </div>
+              <div class="form__row form__row--buttons">
+                <a href="#" class="btn btn-save">
+                  <div class="btn__icon-container">
+                    <i class="icon icon-load"></i>
+                  </div>
+                  <div class="btn__text">
+                    <span class="btn__state">Сохраняем…</span>
+                    <span class="btn__action">Автосохранение 23:04:15</span>
+                  </div>
+                </a>
+                <button class="btn btn-green">Разместить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-content__footer">
+        </div>
+      </div>
+      <div class="modal-help-block modal-help-block--pos-top">
+        <div class="modal-help-block__container">
+          <div class="modal-help-block__header">
+            <span>Помощь</span>
+          </div>
+          <div class="modal-help-block__body">
+            <div class="modal-steps-list">
+              <div class="modal-steps-list__item">
+                <span class="modal-steps-list__title">Шаг 1</span>
+                <p class="modal-steps-list__text">
+                  Введите наименование компании или ИНН
+                </p>
+              </div>
+              <div class="modal-steps-list__item">
+                <span class="modal-steps-list__title">Шаг 1</span>
+                <p class="modal-steps-list__text">
+                  Введите наименование компании или ИНН
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-help-block__footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
 <div class="modal-custom">
   <div class="modal bd-example-modal-lg" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="optionsModalLabel" aria-hidden="true">
     <div class="modal-menu">
-      <a href="#" class="modal-menu__item">
+      <a href="#" class="modal-menu__item" data-toggle="modal" data-target="#newGaranteeModal" data-dismiss="modal" aria-label="Close">
         <img src="img/new-garantee.svg" alt="">
         <span>Новая гарантия</span>
       </a>

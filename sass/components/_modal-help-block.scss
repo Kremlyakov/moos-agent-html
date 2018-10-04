@@ -1,10 +1,22 @@
 .modal-help-block {
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  transform: translate(calc(100% + 323px), -50%);
+
+  $r: &;
+
+  position: absolute;
   width: 208px;
-  z-index: 9999;
+  z-index: 999999;
+
+  &:not(#{$r}--pos-top){
+    top: 50%;
+    right: 50%;
+    transform: translate(calc(100% + 323px), -50%);
+  }
+
+  &--pos-top {
+    top: 0;
+    right: 50%;
+    transform: translateX(calc(100% + 323px));
+  }
 
   &__container {
     border-radius: 16px;
