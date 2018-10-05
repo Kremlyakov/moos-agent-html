@@ -25,13 +25,64 @@
         <li class="fr-sidebar__menu--active"><span class="icon icon-user"></span><a href="#">Клиенты</a></li>
       </ul>
       <div class="fr-sidebar-bm">
+        <div class="fr-sidebar-bm__values statistic-values">
+          <div class="statistic-values__change">
+            <span class="statistic-values__from">5</span>
+            <span class="statistic-values__change-icon statistic-values__change-icon--up">
+              <i class="icon icon-chevron-right"></i>
+            </span>
+            <span class="statistic-values__to">
+              6
+              <span>%</span>
+            </span>
+          </div>
+          <div class="statistic-values__total">+48 159.12 ₽</div>
+        </div>
         <div class="fr-sidebar-bm__statistics">
-          <div class="fr-sidebar-bm__statistics-cont"><img src="img/stat.svg" alt=""/></div>
+          <div class="fr-sidebar-bm__statistics-cont progress-statistic">
+            <div class="progress-statistic__item progress-statistic__item--red">
+              <span class="progress-statistic__counter">20</span>
+              <span class="progress-statistic__status">Отказано</span>
+              <span class="progress-statistic__bar" style="width: 55.8%"></span>
+            </div>
+            <div class="progress-statistic__item progress-statistic__item--green">
+              <span class="progress-statistic__counter">8</span>
+              <span class="progress-statistic__status">Одобрено</span>
+              <span class="progress-statistic__bar" style="width: 32.2%"></span>
+            </div>
+            <div class="progress-statistic__item progress-statistic__item--yellow">
+              <span class="progress-statistic__counter">34</span>
+              <span class="progress-statistic__status">В процессе</span>
+              <span class="progress-statistic__bar" style="width: 69.7%"></span>
+            </div>
+            <div class="progress-statistic__item progress-statistic__item--purple">
+              <span class="progress-statistic__counter">2</span>
+              <span class="progress-statistic__status">Подано</span>
+              <span class="progress-statistic__bar" style="width: 13%"></span>
+            </div>
+          </div>
           <div class="fr-sidebar-bm__statistics-btn"><a href="#">Смотреть статистику</a></div>
         </div>
-
         <div class="fr-user-menu">
-          <div class="fr-user-menu__name"><span class="icon icon-user"></span>Созонов В.</div>
+          <div class="fr-user-menu__dropdown">
+            <div class="fr-user-menu__list">
+              <a href="#" class="fr-user-menu__item">
+                <i class="icon icon-settings"></i>
+                Настройки
+              </a>
+              <a href="#" class="fr-user-menu__item">
+                <i class="icon icon-profile"></i>
+                Профиль
+              </a>
+              <a href="#" class="fr-user-menu__item">
+                <i class="icon icon-exit"></i>
+                Выход
+              </a>
+            </div>
+          </div>
+          <div class="fr-user-menu__main">
+            <div class="fr-user-menu__name"><span class="icon icon-user"></span>Созонов В.</div>
+          </div>
         </div>
       </div>
     </section>

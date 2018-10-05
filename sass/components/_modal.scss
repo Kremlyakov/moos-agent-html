@@ -194,20 +194,20 @@
 }
 
 /* modal-search */
-.modal-search{
+.modal-search {
 
-  .modal-dialog{
+  .modal-dialog {
     width: 800px;
     max-width: 800px;
 
-    .modal-content{
+    .modal-content {
       padding: 0;
       margin-top: 70px;
     }
 
-    .form-search{
+    .form-search {
 
-      &__row{
+      &__row {
         position: relative;
         height: 85px;
         border-bottom: 4px solid #fff;
@@ -233,16 +233,23 @@
             color: #fff;
           }
         }
-        .icon-search{
+        .icon-search {
           position: absolute;
           left: 20px;
           top: 16px;
         }
-        .icon-prelouder{
+        .icon-prelouder {
           position: absolute;
           top: 30px;
           right: 10px;
         }
+      }
+
+      .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 64px;
       }
     }
   }
