@@ -68,12 +68,23 @@
 /* modal-custom--empty */
 .modal-custom--empty {
 
-  .modal-dialog{
-    width: 380px;
+  .modal-dialog {
+    max-width: 380px;
+
+    &--medium {
+      max-width: 500px;
+    }
+    &--lg {
+      max-width: 800px;
+    }
   }
-  .modal-content{
+  .modal-content {
     border: none;
     background: transparent;
+
+    &__p-0 {
+      padding: 0;
+    }
   }
 }
 
@@ -191,6 +202,49 @@
       justify-content: center;
     }
   }
+  &__text {
+    font: {
+      size: 24px;
+      weight: 500;
+    };
+    line-height: 1.33;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__buttons {
+
+    .btn {
+      width: 100%;
+      font-weight: 500;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__inner {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+  &__card-new-item {
+
+    .btn {
+      max-width: 376px;
+      margin: 0 auto;
+    }
+  }
+  &__icon {
+    display: flex;
+    width: 80px;
+    margin: auto auto 32px;
+
+    svg {
+      max-width: 100%;
+    }
+  }
 }
 
 /* modal-search */
@@ -255,5 +309,12 @@
   }
 }
 
+.modal-dialog {
 
+  &--transparent {
+    background-color: transparent;
+
+
+  }
+}
 

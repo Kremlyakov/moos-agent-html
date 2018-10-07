@@ -1,6 +1,4 @@
 .btn {
-  display: flex;
-  align-items: center;
   border-radius: 16px;
   height: 48px;
   font-size: 16px;
@@ -129,6 +127,8 @@
     }
   }
   &.btn-green {
+    display: flex;
+    align-items: center;
     background-color: #22c7b5;
     border-color: #22c7b5;
 
@@ -181,8 +181,49 @@
     }
   }
   &.btn-light {
+    display: flex;
+    align-items: center;
     line-height: 1.2;
     color: #242232;
+  }
+  &.btn-danger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0000;
+    border-color: #ff0000;
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show>.btn-primary.dropdown-toggle {
+      background-color: #ff0000;
+      border-color: #ff0000;
+    }
+
+    &:hover {
+      background-color: darken(#ff0000, 10);
+      border-color: darken(#ff0000, 10);
+    }
+  }
+  &.btn-white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show>.btn-primary.dropdown-toggle {
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+    &:hover {
+      background-color: darken(#fff, 10);
+      border-color: darken(#fff, 10);
+    }
   }
   &.btn-sm {
     height: auto;
@@ -191,6 +232,13 @@
       weight: 500;
     };
     padding: 10px;
+  }
+  &.btn-md {
+    height: 64px;
+    font: {
+      size: 24px;
+      weight: 500;
+    };
   }
   &.btn-lg {
     height: 80px;

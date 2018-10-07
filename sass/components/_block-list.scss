@@ -1,5 +1,5 @@
 .block-list {
-  margin-top: 160px;
+  padding-top: 160px;
 
   $r: &;
 
@@ -9,10 +9,39 @@
   }
 
   &--clients {
-    margin-top: 0;
+    padding-top: 0;
 
     #{$r}__item {
       padding-bottom: 24px;
+    }
+  }
+
+  &--credits {
+
+    #{$r}__item {
+      padding-top: 16px;
+    }
+  }
+
+  &--requisites {
+    padding-top: 32px;
+
+    h2 {
+      font: {
+        size: 24px;
+        weight: 500;
+      };
+      color: #000;
+      line-height: 1;
+    }
+
+    h4 {
+      font: {
+        size: 18px;
+        weight: 500;
+      };
+      color: #9b9b9b;
+      line-height: 1.33;
     }
   }
 
@@ -95,6 +124,15 @@
 
     &:not(:last-child) {
       margin-bottom: 8px;
+    }
+  }
+
+  &__task-info {
+    width: 50%;
+    flex: none;
+
+    .table {
+      margin-bottom: 0;
     }
   }
 

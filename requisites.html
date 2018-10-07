@@ -13,7 +13,7 @@
 <body>
 
 <div class="fr-app fr-main">
-  <div class="fr-container">
+  <div class="fr-container fr-container--full-width">
     <section class="fr-sidebar">
       <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt="logo"></a>
       <ul class="fr-sidebar__menu">
@@ -83,274 +83,332 @@
       </div>
     </section>
     <section class="fr-content">
-      <div class="main-filter">
-        <div class="main-filter__container">
-          <div class="main-filter__content">
-            <div class="main-filter__row">
-              <div class="main-filter__control main-filter__control--icon-right">
-                <div class="dropdown">
-                  <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
-                    Все документы
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Документ 1</a>
-                    <a class="dropdown-item" href="#">Документ 2</a>
-                    <a class="dropdown-item" href="#">Документ 3</a>
-                  </div>
-                </div>
-                <i class="icon icon-chevron-down"></i>
-              </div>
-              <div class="main-filter__control main-filter__control--icon-left">
-                <i class="icon icon-calendar"></i>
-                <input type="text" class="main-filter__control-field" placeholder="Даты" />
-              </div>
-              <div class="main-filter__control">
-                <input type="text" class="main-filter__control-field" placeholder="Номер сделки" />
-              </div>
-              <div class="main-filter__control">
-                <input type="text" class="main-filter__control-field" placeholder="Клиент" />
-              </div>
-              <div class="main-filter__control main-filter__control--button">
-                <button class="btn btn-search"><i class="icon icon-seacrh-m"></i></button>
-              </div>
-            </div>
-            <div class="main-filter__row">
-              <div class="checkbox-list">
-                <div class="checkbox-list__item checkbox-list__item--purple">
-                  <input type="radio" name="main-filter" id="mainFilterCheckbox1">
-                  <label for="mainFilterCheckbox1">Подано</label>
-                </div>
-                <div class="checkbox-list__item checkbox-list__item--red">
-                  <input type="radio" name="main-filter" id="mainFilterCheckbox2">
-                  <label for="mainFilterCheckbox2">Отказано</label>
-                </div>
-                <div class="checkbox-list__item checkbox-list__item--orange">
-                  <input type="radio" name="main-filter" id="mainFilterCheckbox3">
-                  <label for="mainFilterCheckbox3">В процессе</label>
-                </div>
-                <div class="checkbox-list__item checkbox-list__item--blue">
-                  <input type="radio" name="main-filter" id="mainFilterCheckbox4">
-                  <label for="mainFilterCheckbox4">Одобрено</label>
-                </div>
-                <div class="checkbox-list__item checkbox-list__item--white">
-                  <input type="radio" name="main-filter" id="mainFilterCheckbox5">
-                  <label for="mainFilterCheckbox5">
-                    <span class="icon icon-dots">
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                      <span class="dot"></span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div class="filter-slider">
-                <span>От 30К ₽</span>
-                <input id="rangeSlider" type="text" class="filter-slider__control" data-slider-min="30000" data-slider-max="6900000" data-slider-value="[45000, 5900000]" />
-                <span>До 6.9М ₽</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block-list block-list--tasks">
+      <div class="block-list block-list--requisites">
         <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
           <div class="block-list__row">
-            <div class="stages-progress">
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Подано</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Отказ</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--active">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Требует изменения</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--disabled">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Готово к отправке</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--disabled">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Готово к отправке</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--disabled">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Отправлено</span>
-              </div>
-            </div>
-            <div class="block-list__posted-time">
-              <span>3 дня</span>
-            </div>
+            <h2>ООО «ОДАС» Сколково</h2>
+            <ul class="stats-list">
+              <li class="stats-list__item stats-list__item--purple">
+                <i class="icon icon-ok"></i>
+                <span>1</span>
+              </li>
+              <li class="stats-list__item stats-list__item--yellow">
+                <i class="icon icon-ok"></i>
+                <span>2</span>
+              </li>
+              <li class="stats-list__item stats-list__item--green">
+                <i class="icon icon-ok"></i>
+                <span>10</span>
+              </li>
+            </ul>
           </div>
           <div class="block-list__row">
-            <div>
-              <div class="block-list__info block-list__info--with-icon">
-                <span class="icon icon-user"></span>
-                <span>ООО «ОДАС» Сколково</span>
-              </div>
-              <div class="block-list__info">ИНН: 771375236257</div>
-            </div>
-            <div>
-              <table class="table block-list__table">
-                <tr>
-                  <th>Срок БГ</th>
-                  <th>НМЦ закупки</th>
-                  <th>Предложеная цена</th>
-                </tr>
-                <tr>
-                  <td>4 дня</td>
-                  <td>5 000 000.00 ₽</td>
-                  <td>2 213 942 123.00 ₽</td>
-                </tr>
-              </table>
-            </div>
+            <table class="table table__default mb-0">
+              <tr>
+                <th class="table__text-left" style="width: 180px">ИНН</th>
+                <th class="table__text-left" style="width: 170px">КПП</th>
+                <th class="table__text-left" style="width: 180px">ОГРН</th>
+                <th class="table__text-right">Сумма сделок</th>
+              </tr>
+              <tr>
+                <td class="table__text-left">771375236257</td>
+                <td class="table__text-left">771001001</td>
+                <td class="table__text-left">771375236257</td>
+                <td class="table__text-right">2 213 942.00 ₽</td>
+              </tr>
+            </table>
           </div>
+          <hr>
+          <h4>Условия</h4>
           <div class="block-list__row">
-            <div class="block-list__desc">
-              <span>101-ЭГБ/17</span>
-              <span class="block-list__date-from">от 19.07.2018</span>
-            </div>
-            <button class="btn btn-primary btn-primary--with-icon" data-toggle="modal" data-target="#promptModal">
-              Заполнить уведомление об отказе
-              <i class="icon icon-chevron-right"></i>
-            </button>
+            <table class="table table__default mb-0">
+              <tr>
+                <th class="table__text-left" style="width: 180px">Контактное лицо</th>
+                <th class="table__text-left" style="width: 170px">Телефон</th>
+                <th class="table__text-left" style="width: 320px">Адрес</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td class="table__text-left">Мельникова Е. В.</td>
+                <td class="table__text-left">+7 495 950-21-56</td>
+                <td class="table__text-left">Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <hr>
+          <h4>Документы</h4>
+          <div class="documents-list">
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Контракт_Москва 129000_2018_сентябрь</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.docx 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">material-design-ui-kit-xd Tarify-po-paketam-uslug-s</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.pdf 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Tarify-po-paketam-uslug-s-_01.04.2018_</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.pdf 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Контракт_Москва 129000_2018_апрель</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.docx 1,2МБ</span>
+              </div>
+            </a>
           </div>
         </div>
         <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
           <div class="block-list__row">
-            <div class="stages-progress">
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Подано</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Отказ</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Требует изменения</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Готово к отправке</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--active">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Готово к отправке</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--disabled">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Отправлено</span>
-              </div>
-            </div>
-            <div class="block-list__posted-time block-list__posted-time--active">
-              <i class="icon icon-ok"></i>
-              <span>5 часов</span>
-            </div>
+            <h2>ООО «ФАЗУМЛАБ»</h2>
+            <ul class="stats-list">
+              <li class="stats-list__item stats-list__item--purple">
+                <i class="icon icon-ok"></i>
+                <span>1</span>
+              </li>
+              <li class="stats-list__item stats-list__item--yellow">
+                <i class="icon icon-ok"></i>
+                <span>2</span>
+              </li>
+              <li class="stats-list__item stats-list__item--green">
+                <i class="icon icon-ok"></i>
+                <span>10</span>
+              </li>
+            </ul>
           </div>
           <div class="block-list__row">
-            <div>
-              <div class="block-list__info block-list__info--with-icon">
-                <span class="icon icon-user"></span>
-                <span>ИП Осинцев Константин Сергеевич</span>
-              </div>
-              <div class="block-list__info">ИНН: 771375236257</div>
-            </div>
-            <div>
-              <table class="table block-list__table">
-                <tr>
-                  <th>Срок БГ</th>
-                  <th>НМЦ закупки</th>
-                  <th>Предложеная цена</th>
-                </tr>
-                <tr>
-                  <td>4 дня</td>
-                  <td>5 000 000.00 ₽</td>
-                  <td>2 213 942 123.00 ₽</td>
-                </tr>
-              </table>
-            </div>
+            <table class="table table__default mb-0">
+              <tr>
+                <th class="table__text-left" style="width: 180px">ИНН</th>
+                <th class="table__text-left" style="width: 170px">КПП</th>
+                <th class="table__text-left" style="width: 180px">ОГРН</th>
+                <th class="table__text-right">Сумма сделок</th>
+              </tr>
+              <tr>
+                <td class="table__text-left">771375236257</td>
+                <td class="table__text-left">771001001</td>
+                <td class="table__text-left">771375236257</td>
+                <td class="table__text-right">2 213 942.00 ₽</td>
+              </tr>
+            </table>
           </div>
+          <hr>
+          <h4>Условия</h4>
           <div class="block-list__row">
-            <div class="block-list__desc">
-              <span>101-ЭГБ/17</span>
-              <span class="block-list__date-from">от 19.07.2018</span>
-            </div>
-            <button class="btn btn-primary btn-primary--with-icon">
-              Проверить и отправить
-              <i class="icon icon-chevron-right"></i>
-            </button>
+            <table class="table table__default mb-0">
+              <tr>
+                <th class="table__text-left" style="width: 180px">Контактное лицо</th>
+                <th class="table__text-left" style="width: 170px">Телефон</th>
+                <th class="table__text-left" style="width: 320px">Адрес</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td class="table__text-left">Мельникова Е. В.</td>
+                <td class="table__text-left">+7 495 950-21-56</td>
+                <td class="table__text-left">Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <hr>
+          <h4>Документы</h4>
+          <div class="documents-list">
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Контракт_Москва 129000_2018_сентябрь</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.docx 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">material-design-ui-kit-xd Tarify-po-paketam-uslug-s</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.pdf 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Tarify-po-paketam-uslug-s-_01.04.2018_</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.pdf 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Контракт_Москва 129000_2018_апрель</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.docx 1,2МБ</span>
+              </div>
+            </a>
           </div>
         </div>
         <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
           <div class="block-list__row">
-            <div class="stages-progress">
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Подано</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Отказ</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Требует изменения</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--confirmed">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Готово к отправке</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--active">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Готово к отправке</span>
-              </div>
-              <div class="stages-progress__item stages-progress__item--disabled">
-                <i class="stages-progress__icon icon icon-ok"></i>
-                <span class="stages-progress__text">Отправлено</span>
-              </div>
-            </div>
-            <div class="block-list__posted-time block-list__posted-time--active">
-              <i class="icon icon-ok"></i>
-              <span>5 часов</span>
-            </div>
+            <h2>ООО «ОДАС» Сколково</h2>
+            <ul class="stats-list">
+              <li class="stats-list__item stats-list__item--purple">
+                <i class="icon icon-ok"></i>
+                <span>1</span>
+              </li>
+              <li class="stats-list__item stats-list__item--yellow">
+                <i class="icon icon-ok"></i>
+                <span>2</span>
+              </li>
+              <li class="stats-list__item stats-list__item--green">
+                <i class="icon icon-ok"></i>
+                <span>10</span>
+              </li>
+            </ul>
           </div>
           <div class="block-list__row">
-            <div>
-              <div class="block-list__info block-list__info--with-icon">
-                <span class="icon icon-user"></span>
-                <span>ИП Осинцев Константин Сергеевич</span>
-              </div>
-              <div class="block-list__info">ИНН: 771375236257</div>
-            </div>
-            <div>
-              <table class="table block-list__table">
-                <tr>
-                  <th>Срок БГ</th>
-                  <th>НМЦ закупки</th>
-                  <th>Предложеная цена</th>
-                </tr>
-                <tr>
-                  <td>4 дня</td>
-                  <td>5 000 000.00 ₽</td>
-                  <td>2 213 942 123.00 ₽</td>
-                </tr>
-              </table>
-            </div>
+            <table class="table table__default mb-0">
+              <tr>
+                <th class="table__text-left" style="width: 180px">ИНН</th>
+                <th class="table__text-left" style="width: 170px">КПП</th>
+                <th class="table__text-left" style="width: 180px">ОГРН</th>
+                <th class="table__text-right">Сумма сделок</th>
+              </tr>
+              <tr>
+                <td class="table__text-left">771375236257</td>
+                <td class="table__text-left">771001001</td>
+                <td class="table__text-left">771375236257</td>
+                <td class="table__text-right">2 213 942.00 ₽</td>
+              </tr>
+            </table>
           </div>
+          <hr>
+          <h4>Условия</h4>
           <div class="block-list__row">
-            <div class="block-list__desc">
-              <span>101-ЭГБ/17</span>
-              <span class="block-list__date-from">от 19.07.2018</span>
-            </div>
-            <button class="btn btn-primary btn-primary--with-icon">
-              Проверить и отправить
-              <i class="icon icon-chevron-right"></i>
-            </button>
+            <table class="table table__default mb-0">
+              <tr>
+                <th class="table__text-left" style="width: 180px">Контактное лицо</th>
+                <th class="table__text-left" style="width: 170px">Телефон</th>
+                <th class="table__text-left" style="width: 320px">Адрес</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td class="table__text-left">Мельникова Е. В.</td>
+                <td class="table__text-left">+7 495 950-21-56</td>
+                <td class="table__text-left">Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <hr>
+          <h4>Документы</h4>
+          <div class="documents-list">
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Контракт_Москва 129000_2018_сентябрь</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.docx 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">material-design-ui-kit-xd Tarify-po-paketam-uslug-s</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.pdf 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Tarify-po-paketam-uslug-s-_01.04.2018_</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.pdf 1,2МБ</span>
+              </div>
+            </a>
+            <a href="#" class="documents-list__item">
+              <div class="documents-list__item-body">
+                <div class="documents-list__item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
+                  </svg>
+                </div>
+                <span class="documents-list__item-title">Контракт_Москва 129000_2018_апрель</span>
+              </div>
+              <div class="documents-list__item-footer">
+                <span class="documents-list__item-size">.docx 1,2МБ</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
