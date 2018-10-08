@@ -19,6 +19,7 @@
       <ul class="fr-sidebar__menu">
         <li class="fr-sidebar__menu--active"><span class="icon icon-ok"></span><a href="#">Задачи</a></li>
         <li><span class="icon icon-user"></span><a href="#">Клиенты</a></li>
+        <li><span class="icon icon-stamp"></span><a href="#">Реквизиты</a></li>
       </ul>
       <div class="fr-sidebar-bm">
         <div class="fr-sidebar-bm__values statistic-values">
@@ -84,7 +85,7 @@
     </section>
     <section class="fr-content">
       <div class="block-list block-list--requisites">
-        <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
+        <div class="block-list__item">
           <div class="block-list__row">
             <h2>ООО «ОДАС» Сколково</h2>
             <ul class="stats-list">
@@ -139,12 +140,10 @@
           <hr>
           <h4>Документы</h4>
           <div class="documents-list">
-            <a href="#" class="documents-list__item">
+            <a href="#" class="documents-list__item" data-toggle="modal" data-target="#documentModal">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Контракт_Москва 129000_2018_сентябрь</span>
               </div>
@@ -152,12 +151,10 @@
                 <span class="documents-list__item-size">.docx 1,2МБ</span>
               </div>
             </a>
-            <a href="#" class="documents-list__item">
+            <a href="#" class="documents-list__item" data-toggle="modal" data-target="#documentModal">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">material-design-ui-kit-xd Tarify-po-paketam-uslug-s</span>
               </div>
@@ -165,12 +162,10 @@
                 <span class="documents-list__item-size">.pdf 1,2МБ</span>
               </div>
             </a>
-            <a href="#" class="documents-list__item">
+            <a href="#" class="documents-list__item" data-toggle="modal" data-target="#documentModal">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Tarify-po-paketam-uslug-s-_01.04.2018_</span>
               </div>
@@ -178,12 +173,10 @@
                 <span class="documents-list__item-size">.pdf 1,2МБ</span>
               </div>
             </a>
-            <a href="#" class="documents-list__item">
+            <a href="#" class="documents-list__item" data-toggle="modal" data-target="#documentModal">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Контракт_Москва 129000_2018_апрель</span>
               </div>
@@ -193,7 +186,7 @@
             </a>
           </div>
         </div>
-        <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
+        <div class="block-list__item">
           <div class="block-list__row">
             <h2>ООО «ФАЗУМЛАБ»</h2>
             <ul class="stats-list">
@@ -251,9 +244,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Контракт_Москва 129000_2018_сентябрь</span>
               </div>
@@ -264,9 +255,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">material-design-ui-kit-xd Tarify-po-paketam-uslug-s</span>
               </div>
@@ -277,9 +266,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Tarify-po-paketam-uslug-s-_01.04.2018_</span>
               </div>
@@ -290,9 +277,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Контракт_Москва 129000_2018_апрель</span>
               </div>
@@ -302,7 +287,7 @@
             </a>
           </div>
         </div>
-        <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
+        <div class="block-list__item">
           <div class="block-list__row">
             <h2>ООО «ОДАС» Сколково</h2>
             <ul class="stats-list">
@@ -360,9 +345,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Контракт_Москва 129000_2018_сентябрь</span>
               </div>
@@ -373,9 +356,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">material-design-ui-kit-xd Tarify-po-paketam-uslug-s</span>
               </div>
@@ -386,9 +367,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Tarify-po-paketam-uslug-s-_01.04.2018_</span>
               </div>
@@ -399,9 +378,7 @@
             <a href="#" class="documents-list__item">
               <div class="documents-list__item-body">
                 <div class="documents-list__item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
-                    <path fill="#9B9B9B" fill-rule="nonzero" d="M12 0H2.4A2.399 2.399 0 0 0 0 2.4v19.2C0 22.927 1.073 24 2.4 24h14.4c1.327 0 2.4-1.073 2.4-2.4V7.2L12 0zM9.6 21.6h-6v-2.4h6v2.4zm6-3.6h-12v-2.4h12V18zm0-3.6h-12V12h12v2.4zm-4.8-6V1.8l6.6 6.6h-6.6z"/>
-                  </svg>
+                  <i class="icon icon-doc-2"></i>
                 </div>
                 <span class="documents-list__item-title">Контракт_Москва 129000_2018_апрель</span>
               </div>
@@ -733,6 +710,120 @@
         </div>
         <div class="modal-content__buttons">
           <a href="#" class="btn btn-md btn-white">Начать</a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom">
+  <div class="modal bd-example-modal-lg fade" id="documentModal" tabindex="-1" role="dialog" aria-labelledby="documentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-content__header">
+          <div>
+            <div class="modal-content__title">
+              <span>Документ</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content__body">
+          <form action="" class="form">
+            <div class="form__title">
+              Вид документа
+            </div>
+            <div class="form__row row mb-5">
+              <div class="form-group col-12">
+                <label for="companyName" class="sr-only">Кредит</label>
+                <div id="companyName" class="form-control form-control--icon-right form-control--dropdown">
+                  <div class="dropdown dropdown--company">
+                    <button type="button" class="btn btn-dropdown btn--text-center dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                      Кредит
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Кредит 1</a>
+                      <a class="dropdown-item" href="#">Кредит 2</a>
+                      <a class="dropdown-item" href="#">Кредит 3</a>
+                    </div>
+                  </div>
+                </div>
+                <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+              </div>
+            </div>
+            <hr>
+            <div class="form__title">
+              Сведения
+            </div>
+            <div class="form__row row">
+              <div class="form-group col-12">
+                <label for="responsibleFio">Ответственный</label>
+                <div class="form-control-container">
+                  <input type="text" class="form-control form-control--text-center" id="responsibleFio" placeholder="Имя Фамилия Отчество" disabled />
+                </div>
+                <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+              </div>
+            </div>
+            <div class="form__row row">
+              <div class="form-group col-4">
+                <label for="documentDates">Начало и окончание</label>
+                <div class="form-control-container form-control-container--icon-left">
+                  <input type="text" class="form-control form-control--text-center" id="documentDates" placeholder="Даты" disabled />
+                  <i class="icon icon-calendar"></i>
+                </div>
+                <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+              </div>
+              <div class="form-group col-4">
+                <label for="documentPrice">Сумма</label>
+                <div class="form-control-container form-control-container--icon-left">
+                  <input id="documentPrice" type="text" class="form-control form-control--text-center" placeholder="1 540 000" disabled />
+                </div>
+                <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+              </div>
+              <div class="form-group col-4">
+                <label for="documentBid">Ставка</label>
+                <div id="documentBid" class="form-control form-control--icon-right form-control--dropdown">
+                  <div class="dropdown dropdown--company">
+                    <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--hidden-border" data-toggle="dropdown">
+                      13%
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">10%</a>
+                      <a class="dropdown-item" href="#">11%</a>
+                      <a class="dropdown-item" href="#">12%</a>
+                      <a class="dropdown-item" href="#">13%</a>
+                    </div>
+                  </div>
+                </div>
+                <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+              </div>
+            </div>
+            <div class="form__row row">
+              <div class="form-group col-12">
+                <label for="contractThing">Дополнительная информация</label>
+                <div class="form-control-container">
+                  <input type="text" class="form-control form-control--text-center" id="contractThing" placeholder="Напишите" disabled />
+                </div>
+                <p class="validation-message">Номер не совпадает со значением в базе. Введите верный номер.</p>
+              </div>
+            </div>
+            <hr class="mb-5">
+            <div class="form__row form__row--buttons">
+              <a href="#" class="btn btn-save">
+                <div class="btn__icon-container">
+                  <i class="icon icon-load"></i>
+                </div>
+                <div class="btn__text">
+                  <span class="btn__state">Сохраняем…</span>
+                  <span class="btn__action">Автосохранение 23:04:15</span>
+                </div>
+              </a>
+              <button class="btn btn-green btn--text-center">Разместить</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

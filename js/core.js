@@ -14,9 +14,20 @@ $(function(){
     e.stopPropagation();
 
     let eventTarget = $(e.currentTarget).data('target');
-    if($(e.currentTarget).data('dismiss') === 'modal') $('.modal').modal('hide');
+    let modal = $('.modal');
+    console.log(eventTarget);
 
-    $(eventTarget).modal('show');
+    if($(e.currentTarget).data('dismiss') === 'modal'){
+      modal.modal('hide');
+      if(eventTarget !== ''){
+        modal.on('hidden.bs.modal', function(){
+          $(eventTarget).modal('show');
+          return true;
+        });
+      }
+    } else {
+      $(eventTarget).modal('show');
+    }
   });
 
 

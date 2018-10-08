@@ -254,6 +254,15 @@
       margin-right: 16px;
     }
   }
+
+  &--text-center {
+    justify-content: center;
+    text-align: center;
+  }
+  &--text-left {
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 .btn-options {
   position: fixed;
