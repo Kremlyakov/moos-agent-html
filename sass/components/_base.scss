@@ -75,6 +75,10 @@ body{
     width: 930px;
     height: 100%;
     margin-left: 105px;
+
+    &--margin-min {
+      margin-left: 40px;
+    }
   }
 
   &--with-notification {
