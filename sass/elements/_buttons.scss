@@ -225,6 +225,35 @@
       border-color: darken(#fff, 10);
     }
   }
+  &.btn-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    text-shadow: none;
+    border-radius: 32px;
+    background-color: #fff;
+    z-index: 9;
+    opacity: 1;
+    transition: all 0.3s 0s;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 1px;
+      font-size: 40px;
+      font-weight: normal;
+      color: #000;
+    }
+
+    &:hover {
+      text-decoration: none;
+      opacity: .75;
+    }
+  }
   &.btn-sm {
     height: auto;
     font: {
