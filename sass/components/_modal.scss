@@ -57,6 +57,22 @@
     padding: 32px;
   }
 
+  .modal-dialog {
+    max-width: 380px;
+
+    &--medium {
+      max-width: 500px;
+    }
+    &--lg {
+      max-width: 800px;
+    }
+    &--xl {
+      width: auto;
+      max-width: 1040px;
+      margin: 32px auto;
+    }
+  }
+
   &--with-help-block {
     .modal-lg {
       max-width: 1008px;
@@ -68,16 +84,6 @@
 /* modal-custom--empty */
 .modal-custom--empty {
 
-  .modal-dialog {
-    max-width: 380px;
-
-    &--medium {
-      max-width: 500px;
-    }
-    &--lg {
-      max-width: 800px;
-    }
-  }
   .modal-content {
     border: none;
     background: transparent;

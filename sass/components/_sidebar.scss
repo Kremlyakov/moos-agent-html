@@ -1,4 +1,13 @@
 .fr-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background-color: #242232;
+  z-index: 999;
+
+  $b: &;
 
   &__logo {
     position: absolute;
@@ -58,7 +67,7 @@
     }
   }
 
-  .fr-sidebar-bm {
+  #{$b}-bm {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
@@ -71,7 +80,7 @@
     &__statistics-cont {
       padding-top: 1rem;
     }
-    .fr-sidebar-bm__statistics-btn {
+    #{$b}-bm__statistics-btn {
       height: 40px;
       text-align: center;
       padding: 0.5rem 0;
@@ -82,6 +91,45 @@
         color: $white;
         text-decoration: none;
       }
+    }
+  }
+
+  &--min {
+    width: 76px;
+
+    #{$b}-bm__values,
+    #{$b}-bm__statistics {
+      display: none;
+    }
+    #{$b}__logo {
+      width: 54px;
+      left: 10px;
+
+      img {
+        width: 100%;
+      }
+    }
+    #{$b}__menu {
+
+      li {
+        padding: 12px 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .icon {
+          font-size: 24px;
+          margin-right: 0;
+          margin-bottom: 4px;
+        }
+
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+    #{$b}-bm {
+      left: 5px;
     }
   }
 }

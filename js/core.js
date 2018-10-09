@@ -14,25 +14,26 @@ $(function(){
     e.stopPropagation();
 
     let eventTarget = $(e.currentTarget).data('target');
-    let modal = $('.modal');
+    let preventModal = '';
     console.log(eventTarget);
 
     if($(e.currentTarget).data('dismiss') === 'modal'){
-      modal.modal('hide');
+      preventModal !== '' ? preventModal.modal('hide') : $('.modal').modal('hide');
       if(eventTarget !== ''){
-        modal.on('hidden.bs.modal', function(){
+        $(preventModal).on('hidden.bs.modal', function(){
           $(eventTarget).modal('show');
-          return true;
+          preventModal = eventTarget;
         });
       }
     } else {
       $(eventTarget).modal('show');
+      preventModal = eventTarget;
     }
   });
 
 
   function initFrUserMenu(){
-    let userMenuBtn = $('.fr-user-menu__main');
+    let userMenuBtn = $('.fr-user-menu__main, .user-panel__main');
 
     if(userMenuBtn.length === 0) return false;
 
