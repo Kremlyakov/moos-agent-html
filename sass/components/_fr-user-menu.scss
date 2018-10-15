@@ -31,7 +31,7 @@
       right: 0;
       top: 6px;
       font-size: 12px;
-      content: "\62";
+      content: "\64";
       font-family: "farzoom" !important;
       font-style: normal !important;
       font-weight: normal !important;
@@ -42,6 +42,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+
     .icon {
       margin-right: 14px;
       font-size: 12px;
@@ -115,6 +116,12 @@
     #{$fr}__main {
       opacity: 0.4;
       border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    #{$fr}__name {
+      &:before {
+        transform: rotate(180deg);
+      }
     }
 
     #{$fr}__dropdown {

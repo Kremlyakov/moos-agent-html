@@ -187,10 +187,14 @@
     color: #4a4a4a;
 
     &--green {
-      color: $color-green;
+      svg {
+        path {
+          fill: $color-green;
+        }
+      }
     }
 
-    .icon {
+    svg {
       margin-right: 4px;
     }
 
@@ -250,6 +254,9 @@
     svg {
       max-width: 100%;
     }
+  }
+  &__chart-stats {
+    
   }
 }
 

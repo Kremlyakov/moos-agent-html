@@ -15,7 +15,7 @@
 <div class="fr-app fr-notification">
   <div class="notification">
     <span class="notification__text">Отсутствует соединение с сервером. Пожалуйста перезагрузите страницу</span>
-    <i class="icon icon-reload"></i>
+    <a href="#" class="notification__reload-link"><i class="icon icon-reload"></i></a>
   </div>
   <div class="fr-container fr-container--with-notification">
     <section class="fr-sidebar">
@@ -26,16 +26,6 @@
       </ul>
       <div class="fr-sidebar-bm">
         <div class="fr-sidebar-bm__values statistic-values">
-          <div class="statistic-values__change">
-            <span class="statistic-values__from">5</span>
-            <span class="statistic-values__change-icon statistic-values__change-icon--up">
-              <i class="icon icon-chevron-right"></i>
-            </span>
-            <span class="statistic-values__to">
-              6
-              <span>%</span>
-            </span>
-          </div>
           <div class="statistic-values__total">+48 159.12 ₽</div>
         </div>
         <div class="fr-sidebar-bm__statistics">
@@ -61,7 +51,9 @@
               <span class="progress-statistic__bar" style="width: 13%"></span>
             </div>
           </div>
-          <div class="fr-sidebar-bm__statistics-btn"><a href="#">Смотреть статистику</a></div>
+          <div class="fr-sidebar-bm__statistics-btn">
+            <a href="#" data-toggle="modal" data-target="#statsModal">Смотреть статистику</a>
+          </div>
         </div>
         <div class="fr-user-menu">
           <div class="fr-user-menu__dropdown">
@@ -343,6 +335,193 @@
     <a href="#" class="btn-options__link"></a>
   </div>
 </div>
+<!-- Modal-custom -->
+<div class="modal-custom modal-custom--empty">
+  <div class="modal bd-example-modal-lg fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="statsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--xl modal-dialog-centered" role="document">
+      <div class="modal-content modal-content__p-0 modal-content__chart-stats">
+        <div class="modal-content__inner chart-stats">
+          <div class="chart-stats__item">
+            <div class="chart-stats__head">
+              <div class="dropdown">
+                <a class="btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenu1Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Ваша статистика за август
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1Link">
+                  <a class="dropdown-item" href="#">Сентябрь</a>
+                  <a class="dropdown-item" href="#">Октябрь</a>
+                  <a class="dropdown-item" href="#">Ноябрь</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <a class="btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenu2Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Сотрудник
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2Link">
+                  <a class="dropdown-item" href="#">Сотрудник 1</a>
+                  <a class="dropdown-item" href="#">Сотрудник 2</a>
+                  <a class="dropdown-item" href="#">Сотрудник 3</a>
+                </div>
+              </div>
+              <div class="chart-stats__filter">
+                <a href="#" class="chart-stats__filter-item chart-stats__filter-item--active">Заявки</a>
+                <a href="#" class="chart-stats__filter-item">Деньги</a>
+              </div>
+            </div>
+            <div class="chart-stats__body">
+              <div class="chart-stats__chart-wrapper">
+                <img src="./img/chart-1.png" alt="">
+              </div>
+              <div class="chart-stats__info">
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      120
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Подано заявок</span>
+                      <span>4 348 159.12 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--purple">
+                    <div class="chart-stats__info-progress-bar" style="width: 44.4%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      95
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">В процессе</span>
+                      <span>148 000.00 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--yellow">
+                    <div class="chart-stats__info-progress-bar" style="width: 32.3%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      22
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отказано</span>
+                      <span>24 444 100.00 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--red">
+                    <div class="chart-stats__info-progress-bar" style="width: 16%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      245
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Одобрено</span>
+                      <span>500 500.50 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--green">
+                    <div class="chart-stats__info-progress-bar" style="width: 72.2%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-stats__item">
+            <div class="chart-stats__head">
+              <div class="dropdown">
+                <a class="btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenu3Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Cтатистика компании за август
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu3Link">
+                  <a class="dropdown-item" href="#">Сентябрь</a>
+                  <a class="dropdown-item" href="#">Октябрь</a>
+                  <a class="dropdown-item" href="#">Ноябрь</a>
+                </div>
+              </div>
+            </div>
+            <div class="chart-stats__body">
+              <div class="chart-stats__chart-wrapper">
+                <img src="./img/chart-2.png" alt="">
+              </div>
+              <div class="chart-stats__info">
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      2 120
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел аудита</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">+3.123%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 17%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      12 988
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел кредитов</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">+12.9%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 72.3%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      9 812
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел лизинга</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">-9.81%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 44%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      8 800
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел продаж</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">+0.113%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 44%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
 
 <!-- Optional JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

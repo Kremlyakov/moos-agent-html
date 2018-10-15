@@ -3,9 +3,11 @@ $(function(){
   console.log('page loaded!');
 
   initFrUserMenu();
+  initRangeSlider();
+  initFixedFilters();
 
-  $('#rangeSlider').slider({
-
+  $(document).on('scroll', function(){
+    initFixedFilters();
   });
 
   // Modal opening fix
@@ -31,8 +33,7 @@ $(function(){
     }
   });
 
-
-  function initFrUserMenu(){
+  function initFrUserMenu() {
     let userMenuBtn = $('.fr-user-menu__main, .user-panel__main');
 
     if(userMenuBtn.length === 0) return false;
@@ -42,5 +43,25 @@ $(function(){
 
       userMenuBtn.parent().toggleClass('open');
     });
+  }
+  function initRangeSlider() {
+    let rangeContainer = $('#rangeSlider');
+
+    if(rangeContainer.length === 0) return false;
+
+    rangeContainer.slider({
+
+    });
+  }
+  function initFixedFilters() {
+    let filtersContainer = $('.main-filter');
+
+    if(filtersContainer.length === 0) return false;
+
+    if($(window).scrollTop() > 0){
+      filtersContainer.addClass('main-filter--fixed');
+    } else {
+      filtersContainer.removeClass('main-filter--fixed');
+    }
   }
 });
