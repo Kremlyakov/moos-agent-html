@@ -5,6 +5,8 @@ $(function(){
   initFrUserMenu();
   initRangeSlider();
   initFixedFilters();
+  initSearchForm();
+  initStatesFormControls();
 
   $(document).on('scroll', function(){
     initFixedFilters();
@@ -63,5 +65,37 @@ $(function(){
     } else {
       filtersContainer.removeClass('main-filter--fixed');
     }
+  }
+  function initSearchForm() {
+    let searchInput = $('#search');
+    let searchForm = searchInput.closest('.form-search');
+
+    if(searchInput.length === 0 || searchForm.length === 0) return false;
+
+    searchInput.on('input', function(){
+      (searchInput.val() === '')
+        ? hideElements()
+        : showElements();
+    });
+
+    function showElements() {
+      searchForm.addClass('filled');
+    }
+    function hideElements() {
+      searchForm.removeClass('filled');
+    }
+  }
+  function initStatesFormControls() {
+    let inputsList = $('.form-control');
+
+    if(inputsList.length === 0) return false;
+
+    inputsList.on('input', function(){
+      if($(this).val() === '') {
+        $(this).removeClass('filled');
+      }else {
+        $(this).addClass('filled');
+      }
+    });
   }
 });

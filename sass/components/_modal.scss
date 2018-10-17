@@ -266,13 +266,24 @@
   .modal-dialog {
     width: 800px;
     max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 70px;
+    display: flex;
 
     .modal-content {
       padding: 0;
-      margin-top: 70px;
+      height: 100%;
+      display: flex;
     }
 
     .form-search {
+      position: relative;
+      max-height: 85px;
+      top: 50%;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      transition: all 0.5s 0s;
 
       &__row {
         position: relative;
@@ -280,16 +291,18 @@
         border-bottom: 4px solid #fff;
 
         .form-control{
-          padding: 0px 20px 0px 95px;
+          padding: 0 60px 0 95px;
           font-size: 64px;
           font-weight: normal;
           font-style: normal;
           letter-spacing: normal;
           color: #ff3900;
-          text-shadow: 0px 0px 0px #fff;
+          text-shadow: 0 0 0 #fff;
           -webkit-text-fill-color: transparent;
           background: transparent;
           height: 72px;
+          line-height: 72px;
+          vertical-align: middle;
           border: none;
 
           &:focus{
@@ -312,11 +325,29 @@
         }
       }
 
+      .autocomplete, .button-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s 0s;
+      }
+
       .button-container {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 64px;
+      }
+
+      &.filled {
+        max-height: 1000px;
+        top: 0;
+        transform: translateX(0);
+
+        .autocomplete,
+        .button-container {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }
