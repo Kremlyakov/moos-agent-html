@@ -16,10 +16,16 @@
   <div class="fr-container">
     <section class="fr-sidebar">
       <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt="logo"></a>
-      <ul class="fr-sidebar__menu">
-        <li class="fr-sidebar__menu--active"><span class="icon icon-ok"></span><a href="#">Задачи</a></li>
-        <li><span class="icon icon-user"></span><a href="#">Клиенты</a></li>
-      </ul>
+      <div class="fr-sidebar__menu">
+        <a class="active" aria-current="page" href="/tasks">
+          <span class="icon icon-ok"></span>
+          Задачи
+        </a>
+        <a href="/clients">
+          <span class="icon icon-user"></span>
+          Клиенты
+        </a>
+      </div>
       <div class="fr-sidebar-bm">
         <div class="fr-sidebar-bm__values statistic-values">
           <div class="statistic-values__total">+48 159.12 ₽</div>
@@ -210,6 +216,12 @@
               <i class="icon icon-chevron-right"></i>
             </button>
           </div>
+          <div class="preloader">
+            <svg viewBox="-2000 -1000 4000 2000">
+              <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+              <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+            </svg>
+          </div>
         </div>
         <div class="block-list__item" data-toggle="modal" data-target="#taskModal">
           <div class="block-list__row">
@@ -277,6 +289,12 @@
             <button class="btn btn-primary btn-primary--with-icon">
               Проверить и отправить
               <i class="icon icon-chevron-right"></i>
+              <div class="preloader preloader--small">
+                <svg viewBox="-2000 -1000 4000 2000">
+                  <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+                  <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+                </svg>
+              </div>
             </button>
           </div>
         </div>
