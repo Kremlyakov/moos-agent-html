@@ -6,7 +6,7 @@
   height: 115px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0);
   transition: all 0.3s 0s;
-  z-index: 10;
+  z-index: 998;
 
   &--fixed {
     position: fixed;
@@ -113,6 +113,34 @@
     &--icon-right {
       .icon {
         right: 12px;
+      }
+    }
+
+    &-cleaner {
+      display: flex;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      right: 10px;
+      opacity: 0.4;
+      transform: translateY(-50%);
+      transition: all 0.3s 0s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+      }
+
+      &.hidden {
+        visibility: hidden;
+        opacity: 0;
       }
     }
   }

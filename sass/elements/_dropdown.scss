@@ -11,9 +11,9 @@
       size: 14px;
       weight: 500;
     };
+    cursor: pointer;
   }
 }
-
 .dropdown {
 
   $r: &;
@@ -48,6 +48,36 @@
             margin-right: 10px;
             opacity: 1;
           }
+        }
+      }
+    }
+  }
+}
+.easy-autocomplete-container {
+  ul {
+    border: none;
+    min-width: 100%;
+    border-radius: 0;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.48);
+
+    li {
+      display: block;
+      width: 100%;
+      border: 0;
+      padding: 0;
+
+      .eac-item {
+        display: block;
+        padding: 0.5rem 1rem;
+        white-space: normal;
+        font-size: 14px;
+        line-height: 1.4;
+        cursor: pointer;
+
+        &:hover, &:focus {
+          color: #16181b;
+          text-decoration: none;
+          background-color: #f8f9fa;
         }
       }
     }
