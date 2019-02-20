@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Farzoon main</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/css/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="css/easy-autocomplete.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="fr-app fr-main">
+  <div class="fr-container">
+    <section class="fr-sidebar">
+      <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt="logo"></a>
+      <div class="fr-sidebar__menu">
+        <a aria-current="page" href="/tasks">
+          <span class="icon icon-ok"></span>
+          Задачи
+        </a>
+        <a href="/clients">
+          <span class="icon icon-user"></span>
+          Клиенты
+        </a>
+        <a class="active" href="/agents.html">
+          <span class="icon icon-user"></span>
+          Агенты
+        </a>
+      </div>
+      <div class="fr-sidebar-bm">
+        <div class="fr-sidebar-bm__values statistic-values">
+          <div class="statistic-values__total">+48 159.12 ₽</div>
+        </div>
+        <div class="fr-sidebar-bm__statistics">
+          <div class="fr-sidebar-bm__statistics-cont progress-statistic">
+            <div class="progress-statistic__item progress-statistic__item--red">
+              <span class="progress-statistic__counter">20</span>
+              <span class="progress-statistic__status">Отказано</span>
+              <span class="progress-statistic__bar" style="width: 55.8%"></span>
+            </div>
+            <div class="progress-statistic__item progress-statistic__item--green">
+              <span class="progress-statistic__counter">8</span>
+              <span class="progress-statistic__status">Одобрено</span>
+              <span class="progress-statistic__bar" style="width: 32.2%"></span>
+            </div>
+            <div class="progress-statistic__item progress-statistic__item--yellow">
+              <span class="progress-statistic__counter">34</span>
+              <span class="progress-statistic__status">В процессе</span>
+              <span class="progress-statistic__bar" style="width: 69.7%"></span>
+            </div>
+            <div class="progress-statistic__item progress-statistic__item--purple">
+              <span class="progress-statistic__counter">2</span>
+              <span class="progress-statistic__status">Подано</span>
+              <span class="progress-statistic__bar" style="width: 13%"></span>
+            </div>
+          </div>
+          <div class="fr-sidebar-bm__statistics-btn">
+            <a href="#" data-toggle="modal" data-target="#statsModal">Смотреть статистику</a>
+          </div>
+        </div>
+        <div class="fr-user-menu">
+          <div class="fr-user-menu__dropdown">
+            <div class="fr-user-menu__list">
+              <a href="#" class="fr-user-menu__item">
+                <i class="icon icon-settings"></i>
+                Настройки
+              </a>
+              <a href="#" class="fr-user-menu__item">
+                <i class="icon icon-profile"></i>
+                Профиль
+              </a>
+              <a href="#" class="fr-user-menu__item">
+                <i class="icon icon-exit"></i>
+                Выход
+              </a>
+            </div>
+          </div>
+          <div class="fr-user-menu__main">
+            <div class="fr-user-menu__name"><span class="icon icon-user"></span>Созонов В.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fr-content">
+      <div class="fr-stats-panel">
+        <div class="fr-stats-panel__item">
+          <span class="fr-stats-panel__title">Клиенты</span>
+          <div class="fr-stats-panel__stats">
+            <span class="fr-stats-panel__stats-value">122 871</span>
+          </div>
+        </div>
+        <div class="fr-stats-panel__item">
+          <span class="fr-stats-panel__title">Сделки</span>
+          <div class="fr-stats-panel__stats">
+            <span class="fr-stats-panel__stats-value">192 821</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--purple">1241</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--yellow">9124</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--red">37 888</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--green">87 125</span>
+          </div>
+        </div>
+        <div class="fr-stats-panel__item">
+          <span class="fr-stats-panel__title">Сумма</span>
+          <div class="fr-stats-panel__stats">
+            <span class="fr-stats-panel__stats-value">421 348 159.12 ₽</span>
+          </div>
+        </div>
+      </div>
+      <div class="fr-agents-list">
+        <div class="fr-agent-card">
+          <div class="fr-agent-card__body">
+            <div class="fr-agent-card__main">
+              <span class="fr-agent-card__title">ОАО «Томское пиво»</span>
+              <span>Куратор: Головинский Василий Владимирович</span>
+              <span>Договор № 1 от 01.01.2019</span>
+            </div>
+            <div class="fr-agent-card__stats">
+              <a href="#" class="fr-agent-card__stats-item" data-toggle="modal" data-target="#usersListModal">
+                <span class="fr-agent-card__stats-value">1</span>
+                <span class="fr-agent-card__stats-text">пользователи</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">3</span>
+                <span class="fr-agent-card__stats-text">субагенты</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">5%</span>
+                <span class="fr-agent-card__stats-text">ставка</span>
+              </a>
+            </div>
+          </div>
+          <div class="fr-agent-card__footer">
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--purple" style="width: 47.2%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>5 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--yellow" style="width: 34.5%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">2</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>3 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--green" style="width: 18.3%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>500 000 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fr-agent-card">
+          <div class="fr-agent-card__body">
+            <div class="fr-agent-card__main">
+              <span class="fr-agent-card__title">ОАО «Порто»</span>
+              <span>Куратор: Головинский Василий Владимирович</span>
+              <span>Договор № 1 от 01.01.2019</span>
+            </div>
+            <div class="fr-agent-card__stats">
+              <a href="#" class="fr-agent-card__stats-item" data-toggle="modal" data-target="#usersListModal">
+                <span class="fr-agent-card__stats-value">1</span>
+                <span class="fr-agent-card__stats-text">пользователи</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">3</span>
+                <span class="fr-agent-card__stats-text">субагенты</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">5%</span>
+                <span class="fr-agent-card__stats-text">ставка</span>
+              </a>
+            </div>
+          </div>
+          <div class="fr-agent-card__footer">
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--purple" style="width: 47.2%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>5 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--yellow" style="width: 34.5%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">2</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>3 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--red" style="width: 18.3%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>500 000 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fr-agent-card">
+          <div class="fr-agent-card__body">
+            <div class="fr-agent-card__main">
+              <span class="fr-agent-card__title">ОАО «МОРТЕХСЕРВИС»</span>
+              <span>Куратор: Головинский Василий Владимирович</span>
+              <span>Договор № 1 от 01.01.2019</span>
+            </div>
+            <div class="fr-agent-card__stats" data-toggle="modal" data-target="#usersListModal">
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">1</span>
+                <span class="fr-agent-card__stats-text">пользователи</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">3</span>
+                <span class="fr-agent-card__stats-text">субагенты</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">5%</span>
+                <span class="fr-agent-card__stats-text">ставка</span>
+              </a>
+            </div>
+          </div>
+          <div class="fr-agent-card__footer">
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--purple" style="width: 19.4%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>5 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--yellow" style="width: 62.3%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">2</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>3 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--green" style="width: 18.3%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>500 000 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fr-agent-card">
+          <div class="fr-agent-card__body">
+            <div class="fr-agent-card__main">
+              <span class="fr-agent-card__title">ОАО «ПАЛИТРА РУСИ»</span>
+              <span>Куратор: Головинский Василий Владимирович</span>
+              <span>Договор № 1 от 01.01.2019</span>
+            </div>
+            <div class="fr-agent-card__stats">
+              <a href="#" class="fr-agent-card__stats-item" data-toggle="modal" data-target="#usersListModal">
+                <span class="fr-agent-card__stats-value">1</span>
+                <span class="fr-agent-card__stats-text">пользователи</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">3</span>
+                <span class="fr-agent-card__stats-text">субагенты</span>
+              </a>
+              <a href="#" class="fr-agent-card__stats-item">
+                <span class="fr-agent-card__stats-value">5%</span>
+                <span class="fr-agent-card__stats-text">ставка</span>
+              </a>
+            </div>
+          </div>
+          <div class="fr-agent-card__footer">
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--yellow" style="width: 47.2%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>5 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--green" style="width: 34.5%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">2</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>3 000 000 ₽</span>
+              </div>
+            </div>
+            <div class="fr-agent-card__footer-item fr-agent-card__footer-item--red" style="width: 18.3%">
+              <div class="fr-agent-card__footer-item-counter">
+                <span class="icon icon-ok"></span>
+                <span class="fr-agent-card__footer-item-counter-value">1</span>
+              </div>
+              <div class="fr-agent-card__footer-item-cost">
+                <span>500 000 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="btn-options">
+    <a href="#" class="btn-options__link" data-toggle="modal" data-target="#userEditModal"></a>
+  </div>
+</div>
+
+<!-- Modal-custom -->
+<div class="modal-custom modal-custom--with-help-block">
+  <div class="modal bd-example-modal-lg fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-content__header">
+          <div>
+            <div class="modal-content__title">
+              <span>Банковская гарантия 101-ЭГБ/17</span>
+            </div>
+          </div>
+          <div class="modal-content__header-info">
+            <div class="stages-progress">
+              <div class="stages-progress__item stages-progress__item--confirmed">
+                <i class="stages-progress__icon icon icon-ok"></i>
+                <span class="stages-progress__text">Подано</span>
+              </div>
+              <div class="stages-progress__item stages-progress__item--confirmed">
+                <i class="stages-progress__icon icon icon-ok"></i>
+                <span class="stages-progress__text">Отказ</span>
+              </div>
+              <div class="stages-progress__item stages-progress__item--confirmed">
+                <i class="stages-progress__icon icon icon-ok"></i>
+                <span class="stages-progress__text">Требует изменения</span>
+              </div>
+              <div class="stages-progress__item stages-progress__item--confirmed">
+                <i class="stages-progress__icon icon icon-ok"></i>
+                <span class="stages-progress__text">Готово к отправке</span>
+              </div>
+              <div class="stages-progress__item stages-progress__item--active">
+                <i class="stages-progress__icon icon icon-ok"></i>
+                <span class="stages-progress__text">Готово к отправке</span>
+              </div>
+              <div class="stages-progress__item stages-progress__item--disabled">
+                <i class="stages-progress__icon icon icon-ok"></i>
+                <span class="stages-progress__text">Отправлено</span>
+              </div>
+            </div>
+            <div class="modal-content__posted-time modal-content__posted-time--green">
+              <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M8,0 C3.5816,0 0,3.5816 0,8 C0,12.4184 3.5816,16 8,16 C12.4184,16 16,12.4184 16,8 C16,3.5816 12.4184,0 8,0 Z M10.6344,11.7656 L7.2,8.3312 L7.2,3.2 L8.8,3.2 L8.8,7.6688 L11.7656,10.6344 L10.6344,11.7656 Z" id="Shape"></path>
+              </svg>
+              <span>Задача: подпись клиента</span>
+              <span>5 часов</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content__body">
+          <div class="info-block">
+            <div class="info-block__item info-block__item--title info-block__item--left info-block__item--fullwidth">
+              Принципал
+            </div>
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-value">ООО «ОДАС» Сколково</span>
+              <span class="info-block__item-value">ИНН: 771375236257</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Вид БГ</span>
+              <span class="info-block__item-value">Обеспечение заявки на участие в торгах</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block__item info-block__item--title info-block__item--left info-block__item--fullwidth">
+              Сведения о закупке / контракте
+            </div>
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-title">Реестровый № торгов</span>
+              <span class="info-block__item-value">312312323</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">№ лота</span>
+              <span class="info-block__item-value">112331</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Закон</span>
+              <span class="info-block__item-value">44-ФЗ</span>
+            </div>
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-title">Наименование бенефициара</span>
+              <span class="info-block__item-value">ООО «ФАЗУМ»</span>
+              <span class="info-block__item-value">ИНН: 771375236257</span>
+              <span class="info-block__item-value">КПП: 773123000</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">НМЦ закупки</span>
+              <span class="info-block__item-value">5 000 000.00 ₽</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Гарантия</span>
+              <span class="info-block__item-value">-</span>
+            </div>
+            <div class="info-block__item info-block__item--left">
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Итого закупка</span>
+              <span class="info-block__item-value">5 000 000.00 ₽</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Итого гарантия</span>
+              <span class="info-block__item-value">4 000 000.00 ₽</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-title">Срок БГ</span>
+              <span class="info-block__item-value">4 дня</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Дата начала</span>
+              <span class="info-block__item-value">11 декабря 2018</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Дата окончания</span>
+              <span class="info-block__item-value">15 декабря 2018</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-title">Тип закупки</span>
+              <span class="info-block__item-value">Закупка</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Предложеная цена</span>
+              <span class="info-block__item-value">2 213 942 123.00 ₽</span>
+            </div>
+          </div>
+          <div class="info-block info-block--last">
+            <div class="info-block__item info-block__item--title info-block__item--left info-block__item--fullwidth">
+              Условия банковской гарантии
+            </div>
+            <div class="info-block__item info-block__item--left">
+              <span class="info-block__item-title">Треб. об обеспечении гарантийного периода</span>
+              <span class="info-block__item-value">Нет</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Треб. о бесспорном списании средств</span>
+              <span class="info-block__item-value">Нет</span>
+            </div>
+            <div class="info-block__item info-block__item--right">
+              <span class="info-block__item-title">Треб. дата выдачи</span>
+              <span class="info-block__item-value">11 декабря 2018</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content__footer">
+          <a href="#" class="btn btn-primary btn-green">Проверить и отправить</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-help-block">
+      <div class="modal-help-block__container">
+        <div class="modal-help-block__header">
+          <span>История и задача</span>
+          <i class="icon icon-chevron-right"></i>
+        </div>
+        <div class="modal-help-block__body">
+          <div class="history-list">
+            <div class="history-list__item">
+              <div class="history-list__icon">
+                <i class="icon icon-ok icon--purple"></i>
+              </div>
+              <div class="history-list__item-body">
+                <div class="history-list__info">
+                  <span>19.07.2018</span>
+                  <span>101-ЭГБ/17</span>
+                </div>
+                <div class="history-list__title">
+                  Новая заявка
+                </div>
+                <div class="history-list__status">
+                  Заполнена и отправлена
+                </div>
+              </div>
+            </div>
+            <div class="history-list__item">
+              <div class="history-list__icon">
+                <i class="icon icon-ok icon--red"></i>
+              </div>
+              <div class="history-list__item-body">
+                <div class="history-list__info">
+                  <span>19.07.2018</span>
+                  <span>101-ЭГБ/17</span>
+                </div>
+                <div class="history-list__title">
+                  Отказано банком, возврат на доработку
+                </div>
+                <div class="history-list__status">
+                  Исправлено
+                </div>
+              </div>
+            </div>
+            <div class="history-list__item">
+              <div class="history-list__icon">
+                <i class="icon icon-ok icon--yellow"></i>
+              </div>
+              <div class="history-list__item-body">
+                <div class="history-list__info">
+                  <span>19.07.2018</span>
+                  <span>101-ЭГБ/17</span>
+                </div>
+                <div class="history-list__title">
+                  Одобрено, требует заполнения уведомления
+                </div>
+                <div class="history-list__status">
+                  Уведомление заполнено
+                </div>
+              </div>
+            </div>
+            <div class="history-list__item">
+              <div class="history-list__icon">
+                <i class="icon icon-ok icon--green"></i>
+              </div>
+              <div class="history-list__item-body">
+                <div class="history-list__info">
+                  <span>19.07.2018</span>
+                  <span>101-ЭГБ/17</span>
+                </div>
+                <div class="history-list__status">
+                  Одобрено. Требует проверки перед отправкой
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-help-block__footer">
+          <a href="#" class="btn btn-primary btn-green btn-sm btn--text-center">Проверить и отправить</a>
+        </div>
+      </div>
+      <a href="#" class="btn btn-send">
+        <span>Отправить ссылку</span>
+        <i class="icon icon-send"></i>
+      </a>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom">
+  <div class="modal bd-example-modal-lg fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="optionsModalLabel" aria-hidden="true">
+    <div class="modal-menu">
+      <a href="#" class="modal-menu__item">
+        <img src="img/new-garantee.svg" alt="">
+        <span>Новая гарантия</span>
+      </a>
+      <a href="#" class="modal-menu__item">
+        <img src="img/rewrite-garantee.svg" alt="">
+        <span>Перевыпуск гарантии</span>
+      </a>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom modal-custom--empty">
+  <div class="modal fade" id="promptModal" tabindex="-1" role="dialog" aria-labelledby="promptModalLabel" aria-hidden="true">
+    <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt="logo"></a>
+    <div class="modal-dialog modal-dialog--medium modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-content__text">
+          Подтвердите, что отказываетесь от выполнения этой задачи
+        </div>
+        <div class="modal-content__buttons">
+          <a href="#" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Отказаться</a>
+          <a href="#" class="btn btn-white" data-toggle="modal" data-target="#newTaskModal" data-dismiss="modal">Продолжить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom modal-custom--empty">
+  <div class="modal bd-example-modal-lg fade" id="newTaskModal" tabindex="-1" role="dialog" aria-labelledby="newTaskModalLabel" aria-hidden="true">
+    <a class="fr-sidebar__logo" href="/"><img src="img/logo-min.svg" alt="logo"></a>
+    <div class="modal-dialog modal-dialog--lg modal-dialog-centered" role="document">
+      <div class="modal-content modal-content__p-0 modal-content__card-new-item">
+        <div class="modal-content__inner card card-new-item">
+          <div class="card-new-item__header">
+            <div class="card-new-item__info">
+              <div class="badge badge--purple">Новая заявка</div>
+              <div class="divider"></div>
+              <div class="card-new-item__info-text">
+                <span>ао-359</span>
+                <span>от 01.08.2018</span>
+              </div>
+            </div>
+            <div class="card-new-item__company">
+              <span>ООО «ТехИнвест»</span>
+            </div>
+          </div>
+          <div class="card-new-item__body">
+            <div>
+              <h3>Заполнить заявку на открытие счета</h3>
+            </div>
+            <div>
+              <table class="table table__default">
+                <tr>
+                  <th class="table__text-right">Инициатор</th>
+                  <th class="table__text-right">Ответственный</th>
+                </tr>
+                <tr>
+                  <td class="table__text-right">Farzoom Dev</td>
+                  <td class="table__text-right">G-MOOS_PROMETEY_KC</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content__buttons">
+          <a href="#" class="btn btn-md btn-white" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#proposalModal">Начать</a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom">
+  <div class="modal bd-example-modal-lg fade" id="proposalModal" tabindex="-1" role="dialog" aria-labelledby="proposalModalLabel" aria-hidden="true">
+    <div class="time-block">
+
+    </div>
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom -->
+<div class="modal-custom modal-custom--empty">
+  <div class="modal bd-example-modal-lg fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="statsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--xl modal-dialog-centered" role="document">
+      <div class="modal-content modal-content__p-0 modal-content__chart-stats">
+        <div class="modal-content__inner chart-stats">
+          <div class="chart-stats__item">
+            <div class="chart-stats__head">
+              <div class="dropdown">
+                <a class="btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenu1Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Ваша статистика за август
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1Link">
+                  <a class="dropdown-item" href="#">Сентябрь</a>
+                  <a class="dropdown-item" href="#">Октябрь</a>
+                  <a class="dropdown-item" href="#">Ноябрь</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <a class="btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenu2Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Сотрудник
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2Link">
+                  <a class="dropdown-item" href="#">Сотрудник 1</a>
+                  <a class="dropdown-item" href="#">Сотрудник 2</a>
+                  <a class="dropdown-item" href="#">Сотрудник 3</a>
+                </div>
+              </div>
+              <div class="chart-stats__filter">
+                <a href="#" class="chart-stats__filter-item chart-stats__filter-item--active">Заявки</a>
+                <a href="#" class="chart-stats__filter-item">Деньги</a>
+              </div>
+            </div>
+            <div class="chart-stats__body">
+              <div class="chart-stats__chart-wrapper">
+                <img src="./img/chart-1.png" alt="">
+              </div>
+              <div class="chart-stats__info">
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      120
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Подано заявок</span>
+                      <span>4 348 159.12 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--purple">
+                    <div class="chart-stats__info-progress-bar" style="width: 44.4%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      95
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">В процессе</span>
+                      <span>148 000.00 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--yellow">
+                    <div class="chart-stats__info-progress-bar" style="width: 32.3%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      22
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отказано</span>
+                      <span>24 444 100.00 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--red">
+                    <div class="chart-stats__info-progress-bar" style="width: 16%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main">
+                      245
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Одобрено</span>
+                      <span>500 500.50 ₽</span>
+                    </div>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--green">
+                    <div class="chart-stats__info-progress-bar" style="width: 72.2%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-stats__item">
+            <div class="chart-stats__head">
+              <div class="dropdown">
+                <a class="btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenu3Link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Cтатистика компании за август
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu3Link">
+                  <a class="dropdown-item" href="#">Сентябрь</a>
+                  <a class="dropdown-item" href="#">Октябрь</a>
+                  <a class="dropdown-item" href="#">Ноябрь</a>
+                </div>
+              </div>
+            </div>
+            <div class="chart-stats__body">
+              <div class="chart-stats__chart-wrapper">
+                <img src="./img/chart-2.png" alt="">
+              </div>
+              <div class="chart-stats__info">
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      2 120
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел аудита</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">+3.123%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 17%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      12 988
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел кредитов</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">+12.9%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 72.3%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      9 812
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел лизинга</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">-9.81%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 44%"></div>
+                  </div>
+                </div>
+                <div class="chart-stats__info-item">
+                  <div class="chart-stats__info-stats">
+                    <div class="chart-stats__info-stats-main chart-stats__info-stats-main--md">
+                      8 800
+                    </div>
+                    <div class="chart-stats__info-stats-secondary">
+                      <span class="chart-stats__info-stats-title">Отдел продаж</span>
+                      <span>421 348 159.12 ₽</span>
+                    </div>
+                    <span class="badge">+0.113%</span>
+                  </div>
+                  <div class="chart-stats__info-progress chart-stats__info-progress--white">
+                    <div class="chart-stats__info-progress-bar" style="width: 44%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom empty user edit modal -->
+<div class="modal-custom modal-custom--empty user-edit-form">
+  <div class="modal fade" id="userEditModal" tabindex="-1" role="dialog" aria-labelledby="userEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="restore-pass__title">Добавление пользователя</div>
+          <div class="form-group">
+            <input type="text" class="form-control form-control--transporent" id="userEditFIO" aria-describedby="fioHelp" placeholder="ФИО">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control--transporent" id="userEditEmail1" aria-describedby="emailHelp" placeholder="Эл. почта">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control form-control--transporent" id="userEditRole" aria-describedby="roleHelp" placeholder="Роль">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-block btn-white">Сохранить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+<!-- Modal-custom empty user edit modal -->
+<div class="modal-custom modal-custom--empty users-list">
+  <div class="modal fade" id="usersListModal" tabindex="-1" role="dialog" aria-labelledby="usersListModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog--md" role="document">
+      <div class="modal-content modal-content--centred">
+        <h3>Пользователи</h3>
+        <table class="table table__secondary">
+          <tr>
+            <th>Пользователь</th>
+            <th>Роль</th>
+            <th>Статус</th>
+          </tr>
+          <tr>
+            <td>
+              <span class="table--text-bold">Иванов И.И.</span>
+            </td>
+            <td>
+              <span>менеджер</span>
+            </td>
+            <td>
+              <span class="table__badge table__badge--success">Активен</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="table--text-bold">Петров П.П.</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table__badge table__badge--danger">Заблокирован</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="table--text-bold">Васильев В.В.</span>
+            </td>
+            <td>
+            </td>
+            <td>
+              <span class="table__badge table__badge--success">Активен</span>
+            </td>
+          </tr>
+        </table>
+        <a href="#" class="btn-options__link btn-edit-user"></a>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<!-- END/ Modal-custom -->
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/bootstrap-slider.min.js"></script>
+<script src="js/jquery.easy-autocomplete.min.js"></script>
+
+<script src="js/core.js" type="text/javascript"></script>
+</body>
+</html>

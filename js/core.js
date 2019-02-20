@@ -10,6 +10,7 @@ $(function(){
   initInputsPlaceholders();
   initInputsCleaner();
   initAutocomplete();
+  initUserEditModalOpening();
 
   $(document).on('scroll', function(){
     initFixedFilters();
@@ -398,5 +399,16 @@ $(function(){
         }
       });
     }
+  }
+  function initUserEditModalOpening() {
+    var btnUserEdit = $('.btn-edit-user');
+    var listModal = $('#usersListModal');
+
+    btnUserEdit.on('click', function(){
+      listModal.modal('hide');
+      listModal.on('hidden.bs.modal', function () {
+        $('#userEditModal').modal('show')
+      });
+    });
   }
 });
