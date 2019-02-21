@@ -403,11 +403,17 @@ $(function(){
   function initUserEditModalOpening() {
     var btnUserEdit = $('.btn-edit-user');
     var listModal = $('#usersListModal');
+    var btnClicked = false;
 
     btnUserEdit.on('click', function(){
       listModal.modal('hide');
+      btnClicked = true;
+
       listModal.on('hidden.bs.modal', function () {
-        $('#userEditModal').modal('show')
+        if(btnClicked){
+          $('#userEditModal').modal('show');
+          btnClicked = false;
+        }
       });
     });
   }

@@ -98,11 +98,11 @@
         <div class="fr-stats-panel__item">
           <span class="fr-stats-panel__title">Сделки</span>
           <div class="fr-stats-panel__stats">
-            <span class="fr-stats-panel__stats-value">192 821</span>
-            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--purple">1241</span>
-            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--yellow">9124</span>
-            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--red">37 888</span>
-            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--green">87 125</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--bold">192 821</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--bold fr-stats-panel__stats-value--purple">1241</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--bold fr-stats-panel__stats-value--yellow">9124</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--bold fr-stats-panel__stats-value--red">37 888</span>
+            <span class="fr-stats-panel__stats-value fr-stats-panel__stats-value--bold fr-stats-panel__stats-value--green">87 125</span>
           </div>
         </div>
         <div class="fr-stats-panel__item">
@@ -870,8 +870,17 @@
           <div class="form-group">
             <input type="email" class="form-control form-control--transporent" id="userEditEmail1" aria-describedby="emailHelp" placeholder="Эл. почта">
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control form-control--transporent" id="userEditRole" aria-describedby="roleHelp" placeholder="Роль">
+          <div class="form-group form-group--mb">
+            <div class="dropdown">
+              <button type="button" class="btn btn-dropdown dropdown-toggle btn-dropdown--transparent" data-toggle="dropdown">
+                Роль
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Администратор</a>
+                <a class="dropdown-item" href="#">Менеджер</a>
+                <a class="dropdown-item" href="#">Пользователь</a>
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <button class="btn btn-block btn-white">Сохранить</button>
@@ -899,7 +908,7 @@
           </tr>
           <tr>
             <td>
-              <span class="table--text-bold">Иванов И.И.</span>
+              <a href="#" class="table--text-bold">Иванов И.И.</a>
             </td>
             <td>
               <span>менеджер</span>
@@ -910,7 +919,7 @@
           </tr>
           <tr>
             <td>
-              <span class="table--text-bold">Петров П.П.</span>
+              <a href="#" class="table--text-bold">Петров П.П.</a>
             </td>
             <td>
             </td>
@@ -920,7 +929,7 @@
           </tr>
           <tr>
             <td>
-              <span class="table--text-bold">Васильев В.В.</span>
+              <a href="#" class="table--text-bold">Васильев В.В.</a>
             </td>
             <td>
             </td>
