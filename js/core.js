@@ -11,6 +11,7 @@ $(function(){
   initInputsCleaner();
   initAutocomplete();
   initUserEditModalOpening();
+  initCalculatorFunctions();
 
   $(document).on('scroll', function(){
     initFixedFilters();
@@ -415,6 +416,88 @@ $(function(){
           btnClicked = false;
         }
       });
+    });
+  }
+  function initCalculatorFunctions() {
+    var calculatorContainer = $('.calculator-container');
+
+    if(calculatorContainer.length === 0) return false;
+
+    var guaranteePrice = $('#calculatorGuaranteePrice');
+    var period = $('#calculatorPeriod');
+
+    var priceProgress = $('.price-progress');
+    var comissionProgress = $('.comission-progress');
+    var bonusProgress = $('.bonus-progress');
+
+    var guaranteePriceVal = 0;
+    var periodVal = 0;
+
+    var guaranteePriceSlider = new Slider('#calculatorGuaranteePrice', { });
+    var periodSlider = new Slider('#calculatorPeriod', { });
+
+    guaranteePriceVal = guaranteePriceSlider.getValue();
+    periodVal = periodSlider.getValue();
+
+    priceProgress.find('.value').text(guaranteePriceVal);
+    bonusProgress.find('.value').text(periodVal*200);
+
+    guaranteePriceSlider.on('slide', function(){
+      guaranteePriceVal = guaranteePriceSlider.getValue();
+      priceProgress.find('.value').text(guaranteePriceVal);
+    });
+    periodSlider.on('slide', function(){
+      periodVal = periodSlider.getValue();
+      bonusProgress.find('.value').text(periodVal*200);
+    });
+    guaranteePrice.on('input', function(e){
+      guaranteePriceSlider.setValue(e.target.value);
+      guaranteePriceVal = guaranteePriceSlider.getValue();
+      priceProgress.find('.value').text(guaranteePriceVal);
+    });
+    period.on('input', function(e){
+      periodSlider.setValue(e.target.value);
+      periodVal = periodSlider.getValue();
+      bonusProgress.find('.value').text(periodVal*200);
+    });
+
+    $('#calculatorModal').on('show.bs.modal', function(){
+      var fullWidth = 100;
+      var comissionWidth = 25;
+      var bonusWidth = 15;
+
+      setTimeout(showProgressPanels, 300);
+
+      function showProgressPanels(){
+        priceProgress.css({ 'width': fullWidth + '%' });
+        setTimeout(function(){
+          priceProgress.addClass('shown');
+          comissionProgress.css({ 'width': comissionWidth + '%' });
+          priceProgress.css({ 'width': fullWidth - comissionWidth + '%' });
+        }, 500);
+        setTimeout(function(){
+          comissionProgress.addClass('shown');
+          priceProgress.css({ 'width': fullWidth - comissionWidth - bonusWidth + '%' });
+          comissionProgress.css({ 'width': comissionWidth + '%' });
+          bonusProgress.css({ 'width': bonusWidth + '%' });
+        }, 1000);
+        setTimeout(function(){
+          bonusProgress.addClass('shown');
+        }, 1500);
+      }
+    });
+    $('#calculatorModal').on('hide.bs.modal', function(){
+      var fullWidth = 0;
+      var comissionWidth = 0;
+      var bonusWidth = 0;
+
+      setTimeout(hideProgressPanels, 300);
+
+      function hideProgressPanels(){
+        priceProgress.css({ 'width': 0 }).removeClass('shown');
+        comissionProgress.css({ 'width': 0 }).removeClass('shown');
+        bonusProgress.css({ 'width': 0 }).removeClass('shown');
+      }
     });
   }
 });
